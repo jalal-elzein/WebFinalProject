@@ -1,0 +1,22 @@
+body {
+    background-color: rgba(0, 0, 255, 0.255);
+  }
+@keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+.jump:hover {
+    animation: jump 0.5s ease-in-out;
+  }
+#mario-homepage{
+    height: 400px;
+    float: right;
+    padding: 10px;
+}
