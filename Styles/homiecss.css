@@ -20,3 +20,31 @@ body {
     float: right;
     padding: 10px;
 }
+.container-fluid{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.418);
+  height: 50px;
+  border: solid gray 1px;
+}
+.btn-primary{
+  background-color: black;
+  border: solid black;
+}
+.container-fluid:hover{
+  color: white;
+}
+a {
+  color: rgb(255, 144, 144);
+}
+
+a:hover {
+  color: rgb(255, 250, 250);
+}
+
+.nav-link{
+    background-color: red;
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+    width: 120px;
+    text-align: center;
+}
