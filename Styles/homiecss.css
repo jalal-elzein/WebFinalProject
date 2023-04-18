@@ -22,29 +22,35 @@ body {
 }
 .container-fluid{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.418);
-  height: 50px;
-  border: solid gray 1px;
+  height: 150px;
+  border: 0px;
 }
+
 .btn-primary{
+  --bs-btn-hover-bg: white; 
+  --bs-btn-hover-border-color: white;
+  --bs-btn-hover-color: var(--bs-black);
   background-color: black;
   border: solid black;
 }
 .container-fluid:hover{
-  color: white;
+  color: red;
 }
 a {
   color: rgb(255, 144, 144);
 }
 
 a:hover {
-  color: rgb(255, 250, 250);
+  color: rgb(255, 0, 0)!important;
 }
 
 .nav-link{
-    background-color: red;
-    color: black;
+    color: white;
     font-weight: bold;
-    margin-right: 10px;
+    margin-right: 25px;
     width: 120px;
+    height: 80px;
     text-align: center;
+    line-height: 55px;
+    font-size: x-large;
 }
