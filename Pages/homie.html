@@ -1,36 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../Styles/homiecss.css">
+    <!-- <link rel="stylesheet" href="../Styles/homiecss.css"> -->
+    <link rel="stylesheet" href="../Styles/jalalshomie.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
-<body>
-    <ul class="nav justify-content-center" style="background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#000000 12px); height: 80px;">
-      <span class="navbar-brand mb-1 h2" style="color: white; flex: auto; display: inline-block;
-      max-width: 100%;
-      font-size: 27px; line-height: 65px;">MarioUltimate</span>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Peachezz</a>
-          </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Wiki</a>
-          </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Characters</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Trivia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Memes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
-        </li>
-        <button onclick="window.location.href='..';" class="btn btn-primary" type="button"> <i class="fas fa-user"></i>  Login/Sign Up</button>
-      </ul>
-      <img src="../Images/mar3.png" class="jump" id="mario-homepage">
-      <script src="../js/bootstrap.js"></script>
-</body>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
+      <div class="container-fluid my-white-text">
+        <a class="navbar-brand" href="#">MarioUltimate</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-9 d-flex justify-content-around">
+                <ul class="navbar-nav my-nav-item">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+
+                  <li class="nav-item my-nav-item">
+                    <a class="nav-link" href="#">Peachezz</a>
+                  </li>
+
+                  <li class="nav-item my-nav-item">
+                    <a class="nav-link" href="#">Wiki</a>
+                  </li>
+
+                  <li class="nav-item my-nav-item">
+                    <a class="nav-link" href="#">Memes</a>
+                  </li>
+
+                  <li class="nav-item my-nav-item">
+                    <a class="nav-link" href="#">Trivia</a>
+                  </li>
+
+                  <li class="nav-item my-nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-3 d-flex justify-content-end">
+                <button onclick="window.location.href='..';" class="btn btn-outline-danger" type="button">
+                  <i class="fas fa-user"></i>
+                  Login/Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- remember to unfloat this -->
+    <img src="../Images/mar3.png" class="jump" id="mario-homepage" height="300px" style="float: right;">
+    <script src="../js/bootstrap.js"></script>
+  </body>
+
 </html>
