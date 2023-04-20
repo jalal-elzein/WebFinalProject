@@ -1,12 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarioUltimate FanPage</title>
-</head>
-<body>
+
+  <head>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="../Styles/homiecss.css"> -->
+    <link rel="stylesheet" href="../Styles/jalalshomie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
+      <div class="container-fluid my-white-text">
+        <a class="navbar-brand" href="#">MarioUltimate</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-9 d-flex justify-content-around">
+                <ul class="navbar-nav my-nav-item">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+
+                  <li class="nav-item my-nav-item">
+                    <a class="nav-link" href="#">Peachezz</a>
+                  </li>
+
+                  <li class="nav-item my-nav-item">
+                    <a class="nav-link" href="#">Wiki</a>
+                  </li>
+
+                  <li class="nav-item my-nav-item">
+                    <a class="nav-link" href="#">Memes</a>
+                  </li>
+
+                  <li class="nav-item my-nav-item">
+                    <a class="nav-link" href="#">Trivia</a>
+                  </li>
+
+                  <li class="nav-item my-nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-3 d-flex justify-content-end">
+                <button onclick="window.location.href='..';" class="btn btn-outline-danger" type="button">
+                  <i class="fas fa-user"></i>
+                  Login/Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+<br>
+<br>
+  <div class="d-flex justify-content-between" style="margin-left: 70px; box-shadow: 0 0 10px rgb(211, 6, 6);">
+    <div id="carouselExampleIndicators" class="carousel slide" style="height: 500px; width: 700px; background-color: rgb(15, 15, 15);">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" style="height: 500px; width: 600px;">
+        <div class="carousel-item active">
+          <div class="img-container">
+            <div class="media">
+            <img src="../Images/marioHist1.png" class="d-block w-100">
+            <div class="media-body">
+              <h5 class="mt-0">Super Mario Bro - Oct 1985 </h5>
+              <p>One day the kingdom of the peaceful mushroom people was invaded by the Koopa, a tribe of turtles famous for their black magic. </p>
+            </div>
+            </div>
+          </div>
+        </div>
+      <div class="carousel-item">
+          <div class="img-container">
+            <div class="media">
+            <img src="../Images/mariohist2.png" class="d-block w-100">
+            <div class="media-body">
+              <h5 class="mt-0">Super Mario World - Aug 1991</h5>
+              <p>Having returned peace to Mushroom World, Mario and Luigi decide to take a leisurely vacation with Princess Peach. But soon after arriving on the island, Princess Peach suddenly disappears. As Mario and Luigi desperately search for her, they discover a strange egg on the outskirts of the island. Then, before their very eyes, an odd little dragon hatches! The dragon calls himself Yoshi. Yoshi's friends were also taken by the turtles! Mario and Luigi begin another adventure in hopes of rescuing Yoshi’s pals and Princess Peach!</p>
+            </div>
+            </div>
+          </div>
+      </div>
+      <div class="carousel-item">
+          <div class="img-container">
+            <div class="media">
+            <img src="../Images/MarioAss.jpeg" class="d-block w-100">
+            <div class="media-body">
+              <h5 class="mt-0">Mario first Game</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis diam nec augue lacinia mattis eu ac justo. In nec lacinia augue.</p>
+            </div>
+            </div>
+          </div>
+      </div>
+    </div>
+      <button class="carousel-control-prev btn btn-danger" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next btn btn-danger" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
     
-</body>
+
+    <!-- remember to unfloat this -->
+    <img src="../Images/mar3.png" class="jump" id="mario-homepage" height="300px" style="float: right;">
+
+    <script src="../js/bootstrap.js"></script>
+  </body>
+
 </html>
