@@ -31,11 +31,18 @@ a:hover {
 .nav-item a {
     font-size: large;
 }
+
+
 .img-container{
-    max-width: 300px;
+    max-width: 100%;
     margin: 0 auto;
 }
+
 .media{
-    width: 400px;
+    height: 50%;
     text-align: center;
+}
+
+.carousel {
+    width: 100%;
 }
