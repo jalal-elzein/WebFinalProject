@@ -31,11 +31,32 @@ a:hover {
 .nav-item a {
     font-size: large;
 }
+
+
 .img-container{
-    max-width: 300px;
+    max-width: 100%;
     margin: 0 auto;
 }
+body{
+    background-image: url(../Images/testbg.png);
+}
 .media{
-    width: 400px;
+    height: 50%;
     text-align: center;
 }
+
+.carousel {
+    width: 100%;
+}
+a.card-link:hover .card {
+    box-shadow: 0 0 2rem rgb(255, 0, 0);
+    transform: translateY(-0.25rem);
+  }
+a.card-link:active .card {
+    transform: translateY(0);
+  }
+.card-img-top {
+    height: 300px;
+  }
+  
+  
