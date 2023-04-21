@@ -31,11 +31,40 @@ a:hover {
 .nav-item a {
     font-size: large;
 }
+
+
 .img-container{
-    max-width: 300px;
+    max-width: 100%;
     margin: 0 auto;
 }
+<<<<<<< HEAD
+body{
+    background-image: url(../Images/testbg.png);
+}
+=======
+
+>>>>>>> e8dfa9ada3cbbb89227aff4c67445e286d281276
 .media{
-    width: 400px;
+    height: 50%;
     text-align: center;
 }
+
+.carousel {
+    width: 100%;
+<<<<<<< HEAD
+}
+a.card-link:hover .card {
+    box-shadow: 0 0 2rem rgb(255, 0, 0);
+    transform: translateY(-0.25rem);
+  }
+a.card-link:active .card {
+    transform: translateY(0);
+  }
+.card-img-top {
+    height: 300px;
+  }
+  
+  
+=======
+}
+>>>>>>> e8dfa9ada3cbbb89227aff4c67445e286d281276
