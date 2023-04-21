@@ -1,0 +1,64 @@
+body {
+  background-color: rgba(0, 0, 255, 0.255);
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.jump:hover {
+  animation: jump 0.5s ease-in-out;
+}
+
+#mario-homepage {
+  height: 400px;
+  float: right;
+  padding: 10px;
+}
+
+.container-fluid {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.418);
+  height: 150px;
+  border: 0px;
+}
+
+.btn-primary {
+  --bs-btn-hover-bg: white;
+  --bs-btn-hover-border-color: white;
+  --bs-btn-hover-color: var(--bs-black);
+  background-color: black;
+  border: solid black;
+}
+
+.container-fluid:hover {
+  color: red;
+}
+
+a {
+  color: rgb(255, 144, 144);
+}
+
+a:hover {
+  color: rgb(255, 0, 0) !important;
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+  margin-right: 25px;
+  width: 120px;
+  height: 80px;
+  text-align: center;
+  line-height: 55px;
+  font-size: x-large;
+}
