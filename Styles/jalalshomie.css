@@ -37,9 +37,13 @@ a:hover {
     max-width: 100%;
     margin: 0 auto;
 }
+<<<<<<< HEAD
 body{
     background-image: url(../Images/testbg.png);
 }
+=======
+
+>>>>>>> e8dfa9ada3cbbb89227aff4c67445e286d281276
 .media{
     height: 50%;
     text-align: center;
@@ -47,6 +51,7 @@ body{
 
 .carousel {
     width: 100%;
+<<<<<<< HEAD
 }
 a.card-link:hover .card {
     box-shadow: 0 0 2rem rgb(255, 0, 0);
@@ -60,3 +65,6 @@ a.card-link:active .card {
   }
   
   
+=======
+}
+>>>>>>> e8dfa9ada3cbbb89227aff4c67445e286d281276
