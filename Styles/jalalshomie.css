@@ -28,6 +28,38 @@ a:hover {
     color: rgb(255, 0, 0) !important;
 }
 
+/* #news-button:hover{
+    color: white !important;
+}
+#news-button a {
+    color: white;
+    font-size: larger;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+#news-button:hover a {
+    transform: scale(1.1); 
+} */
+#news-button {
+    transition: transform 0.2s ease; /* Add transition effect to the transform property */
+}
+
+#news-button:hover {
+    transform: scale(1.1); /* Enlarge the button on hover */
+}
+
+#news-button a {
+    color: white;
+    font-size: larger;
+}
+
+#news-button:hover{
+    color: white !important;
+}
+
+
+
 .nav-item a {
     font-size: large;
 }
@@ -37,13 +69,10 @@ a:hover {
     max-width: 100%;
     margin: 0 auto;
 }
-<<<<<<< HEAD
 body{
     background-image: url(../Images/testbg.png);
 }
-=======
 
->>>>>>> e8dfa9ada3cbbb89227aff4c67445e286d281276
 .media{
     height: 50%;
     text-align: center;
@@ -51,7 +80,6 @@ body{
 
 .carousel {
     width: 100%;
-<<<<<<< HEAD
 }
 a.card-link:hover .card {
     box-shadow: 0 0 2rem rgb(255, 0, 0);
@@ -63,8 +91,6 @@ a.card-link:active .card {
 .card-img-top {
     height: 300px;
   }
-  
-  
-=======
+#bottomy.nav-link{
+    font-size: x-large;
 }
->>>>>>> e8dfa9ada3cbbb89227aff4c67445e286d281276
