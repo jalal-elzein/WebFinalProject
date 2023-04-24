@@ -42,6 +42,7 @@ h2 {
     padding-left: 5px;
     padding-right: 5px;
     position: relative;
+    font-family: sans-serif;
   }
   
   .form {
@@ -137,6 +138,7 @@ h2 {
     color: white;
     font-weight: bold;
     animation: zoom 2s ease-in-out infinite alternate;
+    font-family: sans-serif;
   }
   @keyframes zoom {
     0% {
@@ -217,5 +219,14 @@ h2 {
   .card:hover {
     flex: 2;
     background-color: #0c284a;
+  }
+
+  .btn.btn-outline-danger.red{
+    background-color: red;
+    color: white;
+  }
+  .btn.btn-outline-danger.red:hover{
+    background-color: white;
+    color: red;
   }
   
