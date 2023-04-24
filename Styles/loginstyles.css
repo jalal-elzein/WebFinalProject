@@ -1,0 +1,221 @@
+h2 {
+    text-decoration: underline;
+    color: #7a0800;
+  }
+  
+  html {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../Images/mariobg.png);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  @keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+.jump:hover {
+    animation: jump 0.5s ease-in-out;
+}
+  
+  .paragraph {
+    margin: 5px;
+    font-size: 14px;
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+  }
+  
+  .form {
+  
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border: none; /* Remove initial border */
+    box-shadow: 0 0 10px #2207d3; /* Initial box shadow style */
+    animation: glowingBorderAnimation 1s linear infinite alternate;
+  }
+  @keyframes glowingBorderAnimation {
+    0% {
+      box-shadow: 0 0 5px #379bff; /* Change box shadow color at different animation keyframes */
+    }
+    100% {
+      box-shadow: 0 0 10px #2207d3; 
+    }
+  }
+
+  .paragraph-blue {
+    color: #1f63a0;
+    border-color: #05436a;
+  }
+  
+  .row {
+    height: 40px;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    background: #0f67a7;
+  }
+  
+  #dropdown {
+    display: inline-block;
+    height: inherit;
+    cursor: pointer;
+    line-height: 40px;
+    font-weight: bold;
+    background: #0c284a;
+    color: white;
+    width: 80px;
+    text-align: center;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #1f3e68;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  #dropdown .dropdown-item:hover {
+    background-color: rgb(15, 40, 73);
+  }
+  
+  #dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  #dropdown ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  #dropdown li {
+    font-weight: normal;
+    list-style-type: none;
+    background: #174878;
+  }
+  
+  
+  
+  .dropdown-content a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .row.header {
+    position: fixed;
+    top: 0;
+  }
+  
+  .title {
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    animation: zoom 2s ease-in-out infinite alternate;
+  }
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+  
+  .img-container {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 7px;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  
+  .gallery img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .gallery img:hover {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .image-profile {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .table-cell {
+    font-size: 14px;
+    color: gray;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid grey;
+  }
+  
+  .table-header {
+    text-align: center;
+    font-weight: bold;
+    background: rgb(161, 161, 161);
+    color: white;
+  }
+  
+  #user-welcome {
+    display: inline;
+    float: left;
+    color: rgb(9, 7, 52);
+    padding: 3px;
+    font-weight: bold;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .card {
+    border-radius: 20px;
+    margin-left: 10px;
+    height: 200px;
+    background-color: #1c4373;
+    flex: 1;
+    transition: .3s all ease;
+  }
+  
+  .card:hover {
+    flex: 2;
+    background-color: #0c284a;
+  }
+  
