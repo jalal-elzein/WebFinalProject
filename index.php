@@ -28,7 +28,7 @@
                 <br>
                 <input type="password" name="password" id="pinput" class="txtfield">
                 <br><br>
-                <button onclick="window.location.href='./Pages/homie.html';" class="btn btn-outline-danger red" type="button">
+                <button onclick="window.location.href='./Pages/homie.html';" class="btn btn-primary btn btn-danger btn-block text-white" id="news-button" type="button">
                   <i class="fas fa-user"></i>
                   Login
                 </button>
@@ -46,7 +46,7 @@
             <br>
         </span>
         <br>
-        <button onclick="window.location.href='./Pages/signup.html';" class="btn btn-outline-danger red" type="button" style="top: 200;left: 46.5%;position: relative;">
+        <button onclick="window.location.href='./Pages/signup.html';" class="btn btn-primary btn btn-danger btn-block text-white" id="news-button" type="button" style="top: 200;left: 46.5%;position: relative;">
                 <i class="fas fa-user"></i>
                 Sign Up
         </button>

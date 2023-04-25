@@ -229,4 +229,23 @@ h2 {
     background-color: white;
     color: red;
   }
+
+  #news-button {
+    transition: transform 0.2s ease; /* Add transition effect to the transform property */
+}
+
+#news-button:hover {
+    transform: scale(1.1); /* Enlarge the button on hover */
+}
+
+#news-button a {
+    color: white;
+    font-size: larger;
+}
+
+#news-button:hover{
+    color: white !important;
+}
+
+
   

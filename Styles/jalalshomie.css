@@ -58,3 +58,40 @@ a.card-link:active .card {
 .card-img-top {
     height: 300px;
   }
+
+  #memetitle{
+    margin-left: 45%;
+    font-size: xxx-large;
+    color:white;
+    font-weight: bold;
+    color: red;
+    animation: pulse 1s infinite;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color:rgb(64, 177, 36);
+  }
+  50% {
+    transform: scale(1.1);
+    color: rgb(0, 132, 255);
+  }
+  100% {
+    transform: scale(1);
+    color: violet;
+  }
+}
+
+.meme{
+    display: flex;
+}
+.meme img {
+    flex: 1; /* Make each image take up equal space */
+    object-fit: cover; /* Preserve aspect ratio and fill the container */
+    max-width: 250px; /* Ensure images don't exceed container width */
+    max-height: 250px;
+    margin-right: 10px;
+  }
+  
