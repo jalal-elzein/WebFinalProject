@@ -94,3 +94,28 @@ a.card-link:active .card {
 #bottomy.nav-link{
     font-size: x-large;
 }
+#homie-img{
+    border-radius: 10%;
+    border: solid black 10px;
+}
+#homie-head{
+    /*background-color: black;*/
+    font-weight: bolder;
+    font-size: 50px;
+    margin: 0;
+    color: red;
+}
+.meow{
+    height: 300px;
+    float: right;
+    animation: vroom 5s linear infinite;
+}
+@keyframes vroom {
+    0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-200px);
+      }
+  }
+  
