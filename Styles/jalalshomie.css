@@ -60,7 +60,9 @@ a.card-link:active .card {
   }
 
   #memetitle{
-    margin-left: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: xxx-large;
     color:white;
     font-weight: bold;
@@ -90,8 +92,8 @@ a.card-link:active .card {
 .meme img {
     flex: 1; /* Make each image take up equal space */
     object-fit: cover; /* Preserve aspect ratio and fill the container */
-    max-width: 250px; /* Ensure images don't exceed container width */
-    max-height: 250px;
+    max-width: 450px; /* Ensure images don't exceed container width */
+    max-height: 450px;
     margin-right: 10px;
   }
   
