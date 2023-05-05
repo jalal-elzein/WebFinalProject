@@ -1,0 +1,14 @@
+INSERT INTO users(id, username, email,password ) VALUES(1, "rayane-yassine", "rayane_yassine03@hotmail.com", "passrayane");
+INSERT INTO users(id, username, email,password ) VALUES(2, "jalal-elzein", "jalal13elzein@gmail.com", "passjalal");
+INSERT INTO users(id,  username, email,password ) VALUES(3,"mohammad-yazbek",  "mohammad4yazbek@gmail.com", "passmohammad");
+INSERT INTO users(id,  username, email,password ) VALUES(4, "haidar-amin", "haidar4amin@gmail.com",  "passhaidar");
+INSERT INTO users(id,  username, email,password ) VALUES(5, "amal-arandas",  "amal84arandas@gmail.com","passamal");
+INSERT INTO users(id,  username, email,password ) VALUES(6,"maya-nasser",  "maya9nasser@gmail.com", "passmaya");
+INSERT INTO users(id,  username, email,password ) VALUES(7, "tamer-kobba", "tamer7kobba@gmail.com", "passtamer");
+INSERT INTO users(id,  username, email,password ) VALUES(8, "mohammad-shaaban", "mohammad0shaaban@gmail.com","passmohammad");
+INSERT INTO users(id,  username, email,password ) VALUES(9, "abdullah-lababidi", "abdullah5lababidi@gmail.com", "passabdullah");
+INSERT INTO users(id,  username, email,password ) VALUES(10, "mohammad-yamout", "mohammad1yamout@gmail.com", "passmohammad");
+INSERT INTO users(id,  username, email,password ) VALUES(11, "ibarhim-alkotob", "ibrahim42alkotob@gmail.com", "passibrahim");
+INSERT INTO users(id,  username, email,password ) VALUES(12, "cynthia-daou", "cynthia13daou@gmail.com", "passcynthia");
+INSERT INTO users(id,  username, email,password ) VALUES(13, "lama-alsheikh", "lama21alsheikh@gmail.com", "passlama");
+INSERT INTO users(id,  username, email,password ) VALUES(14, "sami-kanawati", "sami64kanawati@gmail.com", "passsami");
