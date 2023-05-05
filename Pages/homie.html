@@ -4,6 +4,7 @@
   <head>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <!-- <link rel="stylesheet" href="../Styles/homiecss.css"> -->
+    <link rel="stylesheet" href="../Styles/homie2.css">
     <link rel="stylesheet" href="../Styles/jalalshomie.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
@@ -65,7 +66,7 @@
     <br>
     <br>
 
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
           <div id="carouselExampleIndicators" class="carousel slide rounded"
             style="background-color: rgb(15, 15, 15);">
@@ -144,8 +145,54 @@
           </div>
         </div>
       </div>
+    </div> -->
+    <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card">
+            <img src="../Images/marioHist1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Hist 1</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card">
+            <img src="image2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Card Title 2</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card">
+            <img src="image3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Card Title 3</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-
+    </div>
+    
     <br>
     <p class="fs-1 fw-bold text-center text-danger bg-dark"> Mario Recent! </p>
     <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-left: 2px;">
@@ -185,7 +232,7 @@
     </div>
     <br>
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-      <a class="btn btn-primary btn btn-danger btn btn-lg btn-block text-white" id="news-button" href="./wiki.html" role="button">See More News ></a>
+      <a class="btn btn-primary btn btn-danger btn btn-lg btn-block text-white" id="news-button" href="../Pages/news.html" role="button">See More News ></a>
     </div>
     <br>
 
@@ -204,15 +251,39 @@
         <div class="col align-self-center">
           <img src="../Images/test.png" class="meow">
         </div>
-        <div class="col align-self-end">
-          <br>
+      </div>
+    </div>
+    
+    <br>
+    <!-- <div class="container text-center">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="../Images/mariohomie.png" class="meow1">
+        </div>
+        <div class="col-md-4 float-end">
           <a href="./peachez.html">
-          <img src="../Images/feelingpeachy.png" id="homie-img">
+            <div class="card" style="width: 30rem; border-radius: 10%; border: solid rgb(0, 0, 0) 10px; float: right; margin-left: 0;">
+              <img src="../Images/feelingpeachy.png" class="card-img-top" style="border-radius: 10%;">
+            </div>
+          </a>
+        </div>
+      </div>
+    </div> -->
+    <div class="container text-center">
+      <div class="row">
+        <div class="col align-self-start">
+          <img src="../Images/mariohomie.png" class="meow1">
+        </div>
+        <div class="col align-self-center">
+          <a href="./characters.html">
+            <div class="card" style="width: 30rem; border-radius: 10%; border: solid rgb(0, 0, 0) 10px">
+              <img src="../Images/feelingpeachy.png" class="card-img-top" style="border-radius: 10%;">
+            </div>
           </a>
         </div>
       </div>
     </div>
-    <br>
+    
 
     <nav class="navbar bg-carbon navbar-dark" style="height: 200px;">
               <img src="../Images/super-mario-run-2017-11-07.png" style="height: 100%;">
