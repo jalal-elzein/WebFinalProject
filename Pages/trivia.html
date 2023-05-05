@@ -20,7 +20,33 @@
                 <h1>Trivia Game</h1>
             </div>
 
+            <a href="../Game/index.html">Platformer Game!</a>
+
             <br>
+            <br>
+
+            <div class="d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Score</h5>
+                        <p class="card-text">
+                            <span id="score">0</span>
+                            <span>/10</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Question</h5>
+                        <p class="card-text">
+                            <span id="qnum">0</span>
+                            <span>/10</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <br>
 
             <div class="card" style="padding: 10px 20px;" id="gamecard">
@@ -33,32 +59,43 @@
 
                 <div class="row margin-tb-10">
                     <div class="col">
-                        <button class="btn btn-outline-dark w-100" value="1" id="btn1"></button>
+                        <button class="btn btn-outline-dark w-100 answer-btn" value="1" id="btn1"></button>
                     </div>
 
                     <div class="col">
-                        <button class="btn btn-outline-dark w-100" value="2" id="btn2"></button>
+                        <button class="btn btn-outline-dark w-100 answer-btn" value="2" id="btn2"></button>
                     </div>
                 </div>
 
                 <div class="row margin-tb-10">
                     <div class="col">
-                        <button class="btn btn-outline-dark w-100" value="3" id="btn3"></button>
+                        <button class="btn btn-outline-dark w-100 answer-btn" value="3" id="btn3"></button>
                     </div>
 
                     <div class="col">
-                        <button class="btn btn-outline-dark w-100" value="4" id="btn4"></button>
+                        <button class="btn btn-outline-dark w-100 answer-btn" value="4" id="btn4"></button>
                     </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-outline-dark w-50 hidden" id="next">Next</button>
+                    
+                    <button class="btn btn-outline-dark w-50 hidden" id="lb"
+                    onclick="window.location.href = 'leaderboards/trivia.php';">Leaderboard</button>
+                    
+                    <button class="btn btn-outline-dark w-50 hidden" id="home"
+                    onclick="window.location.href = 'index.html';">Home</button>
+                    
+                    <button class="btn btn-outline-dark w-50 hidden" id="restart">Restart</button>
                 </div>
             </div>
 
             <button class="btn btn-outline-dark w-100" id="start">Start</button>
-            <!-- <div class="card">
-                <form action="../Backend/trivia/trivia_back.php" method="post">
-                </form>
-            </div> -->
         </div>
 
+        <form>
+            <input type="hidden" name="score2send" id="score2send">
+        </form>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
@@ -68,19 +105,53 @@
     <script>
         $(document).ready(function () {
             $("#gamecard").addClass("hidden");
+            $.ajax({
+                url: '../Backend/trivia/reset_questions.php',
+                type: 'POST',
+                error: function (xhr, status, error) {
+                    console.log(error);
+                },
+                success: function (response) {
+                    console.log("reset response: " + response);
+                }
+            })
         })
 
-        $('.btn').click(function () {
+        $('.answer-btn').click(function () {
             if ($(this).val() == 1) {
                 $(this).addClass("correct");
+                $("#score").html(parseInt($("#score").html()) + 1);
             } else {
                 $(this).addClass("wrong");
             }
+
+            $('.answer-btn').each(function () {
+                if ($(this).val() == 1) {
+                    console.log($(this).html());
+                    $(this).addClass("correct");
+                }
+            });
+
+            $(".answer-btn").not(this).prop("disabled", true);
+
+            if ($("#qnum").html() != "10") {
+                $("#next").removeClass("hidden");
+            }
+
+            else {
+                $("#home").removeClass("hidden");
+                $("#lb").removeClass("hidden");
+                $("#restart").removeClass("hidden");
+                $("#score2send").val($("#score").html());
+                $("form").submit();
+            }
         })
 
-        $("#start").click(function () {
+        // TODO: make sure not to duplicate questions
+        function getNextQuestion() {
             $(this).addClass("hidden");
             $("#gamecard").removeClass("hidden");
+
             $.ajax({
                 url: '../Backend/trivia/trivia_back.php',
                 dataType: 'json',
@@ -92,8 +163,9 @@
                     console.log(q);
                     console.log(a);
 
-                    $("#question").append("<span>" + q["number"] + ". " + q["text"] + "</span>");
+                    $("#question").html(q["number"] + ". " + q["text"]);
 
+                    // TODO: loop this?
                     $("#btn1").html(a[0]["text"]);
                     $("#btn1").val(a[0]["correct"])
                     $("#btn2").html(a[1]["text"]);
@@ -107,6 +179,52 @@
                     console.log('Error:', error);
                 }
             });
+
+            $(".answer-btn").prop("disabled", false);
+            $(".answer-btn").removeClass("correct").removeClass("wrong");
+
+            $("#qnum").html(parseInt($("#qnum").html()) + 1);
+        }
+
+        $("#start").click(getNextQuestion);
+
+        $("#next").click(getNextQuestion);
+
+        $('form').submit(function (event) {
+            event.preventDefault();
+
+            var data = $('#score2send').val();
+
+            $.ajax({
+                url: '../Backend/trivia/save_score.php',
+                type: 'POST',
+                data: { data: data },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+        
+        $("#restart").click(function () {
+            $.ajax({
+                url: '../Backend/trivia/reset_questions.php',
+                type: 'POST',
+                error: function (xhr, status, error) {
+                    console.log(error);
+                },
+                success: function (response) {
+                    console.log("reset response: " + response);
+                }
+            })
+            $(".answer-btn").prop("disabled", false);
+            $(".answer-btn").removeClass("correct").removeClass("wrong");
+            $("#qnum").html("0");
+            $("#score").html(parseInt("0"));
+            $("#home").addClass("hidden");
+            $("#lb").addClass("hidden");
+            $("#restart").addClass("hidden");
+            $("#score2send").val("0");
+            getNextQuestion();
         })
     </script>
 

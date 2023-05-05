@@ -3,16 +3,21 @@
 }
 
 .correct {
-    background-color: var(--bs-green);
-    color: white;
+    background-color: var(--bs-green) !important;
+    color: white !important;
 }
 
 .wrong {
-    background-color: var(--bs-red);
-    color: white;
-    
+    background-color: var(--bs-red) !important;
+    color: white !important;
 }
 
 .hidden {
     display: none;
+}
+
+.no-click {
+    background-color: grey;
+    pointer-events: none;
+    cursor: not-allowed;
 }

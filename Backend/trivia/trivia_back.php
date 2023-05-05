@@ -12,7 +12,22 @@ $questions_qry_res = $db->query($questions_qry);
 $questions_res = $questions_qry_res->fetchAll();
 
 // select a question at random 
-$index = rand(0, $questions_qry_res->rowCount() - 1);
+if (isset($_SESSION["my_questions"])) {
+    $numbers = $_SESSION["my_questions"];
+    $index = rand(0, $questions_qry_res->rowCount() - 1);
+    while (in_array($index, $numbers)) {
+        $index = rand(0, $questions_qry_res->rowCount() - 1);
+    }
+    $numbers[] = $index;
+    $_SESSION["my_questions"] = $numbers;
+} else {
+    $index = rand(0, $questions_qry_res->rowCount() - 1);
+    $numbers = array();
+    $numbers[] = $index;
+    $_SESSION["my_questions"] = $numbers;
+}
+
+// get info about the chosen question
 $question_text = $questions_res[$index]["text"];
 $question_number = $questions_res[$index]["id"];
 
