@@ -18,6 +18,8 @@ body{
     margin-right: 50px;;
 }
 #mario-image{
+    margin-left: 50px;
+    align-items: center;
     position: absolute;
     max-width: 100%;
     max-height: 100%;
