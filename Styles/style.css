@@ -1,0 +1,18 @@
+.margin-tb-10 {
+    margin: 10px 0px;
+}
+
+.correct {
+    background-color: var(--bs-green);
+    color: white;
+}
+
+.wrong {
+    background-color: var(--bs-red);
+    color: white;
+    
+}
+
+.hidden {
+    display: none;
+}
