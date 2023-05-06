@@ -9,25 +9,30 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <link rel="stylesheet" href="../Styles/style.css">
+        <link rel="stylesheet" href="../Styles/trivia.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     </head>
 
-    <body>
+    <body  class="backg-blurred" style="height: 100vh;">
         <div class="container text-center">
+            <!-- page title -->
             <div class="row">
                 <h1>Trivia Game</h1>
             </div>
 
+            <!-- link to game -->
+            <!-- TODO: idk but this ain't it -->
             <a href="../Game/index.html">Platformer Game!</a>
 
             <br>
             <br>
 
+            <!-- stats section -->
             <div class="d-flex justify-content-center">
-                <div class="card">
-                    <div class="card-body">
+                <!-- score card -->
+                <div class="card glass back-blurred" id="scorecard" style="width: 20rem;">
+                    <div class="card-body text-white">
                         <h5 class="card-title">Score</h5>
                         <p class="card-text">
                             <span id="score">0</span>
@@ -36,8 +41,9 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-body">
+                <!-- question num card -->
+                <div class="card glass back-blurred" style="width: 20rem;">
+                    <div class="card-body text-white">
                         <h5 class="card-title">Question</h5>
                         <p class="card-text">
                             <span id="qnum">0</span>
@@ -49,7 +55,9 @@
 
             <br>
 
-            <div class="card" style="padding: 10px 20px;" id="gamecard">
+            <!-- game section -->
+            <div class="card glass back-blurred text-white" style="padding: 10px 20px;" id="gamecard">
+                <!-- question -->
                 <div class="row">
                     <h2 id="question"></h2>
                 </div>
@@ -57,46 +65,54 @@
                 <br>
                 <br>
 
+                <!-- first row of buttons -->
                 <div class="row margin-tb-10">
                     <div class="col">
-                        <button class="btn btn-outline-dark w-100 answer-btn" value="1" id="btn1"></button>
+                        <button class="btn btn-outline-light w-100 answer-btn" value="1" id="btn1"></button>
                     </div>
 
                     <div class="col">
-                        <button class="btn btn-outline-dark w-100 answer-btn" value="2" id="btn2"></button>
+                        <button class="btn btn-outline-light w-100 answer-btn" value="2" id="btn2"></button>
                     </div>
                 </div>
 
+                <!-- second row of buttons -->
                 <div class="row margin-tb-10">
                     <div class="col">
-                        <button class="btn btn-outline-dark w-100 answer-btn" value="3" id="btn3"></button>
+                        <button class="btn btn-outline-light w-100 answer-btn" value="3" id="btn3"></button>
                     </div>
 
                     <div class="col">
-                        <button class="btn btn-outline-dark w-100 answer-btn" value="4" id="btn4"></button>
+                        <button class="btn btn-outline-light w-100 answer-btn" value="4" id="btn4"></button>
                     </div>
                 </div>
 
+                <!-- flow buttons -->
                 <div class="text-center">
-                    <button class="btn btn-outline-dark w-50 hidden" id="next">Next</button>
+                    <button class="btn bol-inverse w-50 hidden" id="next">Next</button>
                     
-                    <button class="btn btn-outline-dark w-50 hidden" id="lb"
+                    <button class="btn bol-inverse w-50 hidden" id="lb"
                     onclick="window.location.href = 'leaderboards/trivia.php';">Leaderboard</button>
                     
-                    <button class="btn btn-outline-dark w-50 hidden" id="home"
+                    <button class="btn bol-inverse w-50 hidden" id="home"
                     onclick="window.location.href = 'index.html';">Home</button>
                     
-                    <button class="btn btn-outline-dark w-50 hidden" id="restart">Restart</button>
+                    <button class="btn bol-inverse w-50 hidden" id="restart">Restart</button>
                 </div>
             </div>
 
-            <button class="btn btn-outline-dark w-100" id="start">Start</button>
+            <!-- start button -->
+            <button class="btn bol-inverse w-100" id="start">Start</button>
+            <button class="btn bol-inverse w-50" id="lb2"
+                onclick="window.location.href = 'leaderboards/trivia.php';">Leaderboard</button>
         </div>
 
+        <!-- score form -->
         <form>
             <input type="hidden" name="score2send" id="score2send">
         </form>
 
+        <!-- linking bootstrap js -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
             </script>
@@ -118,13 +134,18 @@
         })
 
         $('.answer-btn').click(function () {
+            // validate answer and increase score
             if ($(this).val() == 1) {
                 $(this).addClass("correct");
+                $("#gamecard").addClass("green-shadow");
+                $("#scorecard").addClass("blink-green-bg");
                 $("#score").html(parseInt($("#score").html()) + 1);
             } else {
                 $(this).addClass("wrong");
+                $("#gamecard").addClass("red-shadow");
             }
 
+            // show correct answer 
             $('.answer-btn').each(function () {
                 if ($(this).val() == 1) {
                     console.log($(this).html());
@@ -132,12 +153,15 @@
                 }
             });
 
+            // disable other buttons 
             $(".answer-btn").not(this).prop("disabled", true);
 
+            // increment question count
             if ($("#qnum").html() != "10") {
                 $("#next").removeClass("hidden");
             }
 
+            // end quiz
             else {
                 $("#home").removeClass("hidden");
                 $("#lb").removeClass("hidden");
@@ -147,10 +171,11 @@
             }
         })
 
-        // TODO: make sure not to duplicate questions
         function getNextQuestion() {
             $(this).addClass("hidden");
-            $("#gamecard").removeClass("hidden");
+            $("#gamecard").removeClass("hidden").removeClass("green-shadow").removeClass("red-shadow");
+            $("#scorecard").removeClass("blink-green-bg");0
+            $("#lb2").addClass("hidden");
 
             $.ajax({
                 url: '../Backend/trivia/trivia_back.php',

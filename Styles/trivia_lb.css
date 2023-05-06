@@ -1,0 +1,62 @@
+body {
+    background-image: url("../Images/trivia_background.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white !important;
+}
+
+.glass {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+.backg-blurred {
+    backdrop-filter: blur(5px);
+}
+
+.back-blurred {
+    backdrop-filter: blur(10px);
+}
+
+.trans {
+    background-color: transparent;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: var(--bs-table-striped-bg);
+    color: var(--bs-white);
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+    color: yellow;
+}
+
+.btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.bod-inverse {
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bs-red);
+    --bs-btn-border-color: var(--bs-white);
+    --bs-btn-hover-color: var(--bs-red);
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-border-color: var(--bs-red);
+    --bs-btn-focus-shadow-rgb: var(--bd-white-rgb);
+}
+
+.bol-inverse {
+    --bs-btn-color: var(--bs-black);
+    --bs-btn-bg: var(--bs-white);
+    --bs-btn-border-color: var(--bs-white);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-border-color: var(--bs-white);
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-focus-shadow-rgb: var(--bd-white-rgb);
+}
