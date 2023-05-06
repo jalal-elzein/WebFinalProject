@@ -46,3 +46,38 @@ body{
     max-height: 90%;
     object-fit: contain;
   }
+
+  .bg-carbon {
+    background-image: repeating-linear-gradient(-45deg, #292000, #3a1300 6px, rgba(121, 46, 0, 0.882), #6c2903 12px);
+}
+
+.my-white-text a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(255, 0, 0) !important;
+}
+
+#news-button {
+    transition: transform 0.2s ease; /* Add transition effect to the transform property */
+}
+
+#news-button:hover {
+    transform: scale(1.1); /* Enlarge the button on hover */
+}
+
+#news-button a {
+    color: white;
+    font-size: larger;
+}
+
+#news-button:hover{
+    color: white !important;
+}
+
+
+
+.nav-item a {
+    font-size: large;
+}

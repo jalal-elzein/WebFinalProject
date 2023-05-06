@@ -33,4 +33,9 @@
 		$_SESSION["login_status"] = 0;
 		header("location:../index.php");
 	}
+
+	session_start();
+	$_SESSION["loggedin"] = true;
+	$_SESSION["username"] = $username;
+
 ?>

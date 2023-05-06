@@ -1,3 +1,27 @@
+<?php
+	session_start();
+	if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+		// Redirect the user to the login page
+		header("location: login.php");
+		exit;
+	}
+
+	session_start();
+$username = $_SESSION["username"];
+// Query the database for the user's profile data based on their username
+// Display the user's profile data on the page
+
+// Set a cookie with a unique identifier
+setcookie("user_id", $user_id, time() + (86400 * 30), "/");
+
+if (isset($_COOKIE["user_id"])) {
+    $user_id = $_COOKIE["user_id"];
+    // Query the database for the user's profile data based on their user ID
+    // Display the user's profile data on the page
+}
+
+	
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +33,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
 </head>
-<body>
+<body style="margin-top:0px">
+	<nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
+		<div class="container-fluid my-white-text">
+			<a class="navbar-brand" href="#">MarioUltimate</a>
+		  <button onclick="window.location.href='homie.html';" class="btn btn-primary btn btn-danger btn-block text-white" type="button">
+			Go To Homepage
+		  </button>
+		</div>
+	  </nav>
+				<!-- <div class="col-3 d-flex justify-content-end">
+				  <button onclick="window.location.href='homie.html';" class="btn btn-outline-danger" type="button">
+					<i class="fas fa-user"></i>
+					Go To Homepage
+				  </button>
+				</div> -->
+				<br> <br>
     <div class="container">
 		<div class="main-body">
 			<div class="row">
@@ -21,7 +60,7 @@
 								<img src="../Images/blank-profile-picture-973460_1280.webp" alt="Image" class="image rounded-circle p-1 bg-primary" width="110" height="110" onclick="expandImage(this)" style="max-width: 100%;">
 								
 								<div class="mt-3">
-									<h4><?php echo $username; ?></h4>
+									<h4><?php echo $_SESSION["username"];?></h4>
                                     <br>
 									<button class="btn btn-primary btn btn-danger btn-block text-white" id="news-button">Sign Out</button>
 								</div>

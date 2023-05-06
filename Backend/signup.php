@@ -46,5 +46,10 @@ if ($check_result->rowCount() > 0) {
         header("location:../pages/signup.php");
     }
 
+    session_start();
+    $_SESSION["loggedin"] = true;
+    $_SESSION["username"] = $username;
+
+
 }
 ?>
