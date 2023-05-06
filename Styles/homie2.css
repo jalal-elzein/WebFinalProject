@@ -1,0 +1,21 @@
+
+.meow1 {
+    height: 300px;
+    float: left;
+    animation: move-right 5s linear infinite;
+  }
+  
+@keyframes move-right {
+    0% {
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: translateX(200px);
+    }
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+  

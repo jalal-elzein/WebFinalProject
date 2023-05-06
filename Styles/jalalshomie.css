@@ -15,6 +15,7 @@
     animation: jump 0.5s ease-in-out;
 }
 
+
 .bg-carbon {
     background-image: repeating-linear-gradient(-45deg, #302f2f, #302f2f 6px, #2a2929 0, #000000 12px);
 }
@@ -26,6 +27,38 @@
 a:hover {
     color: rgb(255, 0, 0) !important;
 }
+
+/* #news-button:hover{
+    color: white !important;
+}
+#news-button a {
+    color: white;
+    font-size: larger;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+#news-button:hover a {
+    transform: scale(1.1); 
+} */
+#news-button {
+    transition: transform 0.2s ease; /* Add transition effect to the transform property */
+}
+
+#news-button:hover {
+    transform: scale(1.1); /* Enlarge the button on hover */
+}
+
+#news-button a {
+    color: white;
+    font-size: larger;
+}
+
+#news-button:hover{
+    color: white !important;
+}
+
+
 
 .nav-item a {
     font-size: large;
@@ -58,41 +91,31 @@ a.card-link:active .card {
 .card-img-top {
     height: 300px;
   }
-
-  #memetitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: xxx-large;
-    color:white;
-    font-weight: bold;
+#bottomy.nav-link{
+    font-size: x-large;
+}
+#homie-img{
+    border-radius: 10%;
+    border: solid black 10px;
+}
+#homie-head{
+    /*background-color: black;*/
+    font-weight: bolder;
+    font-size: 50px;
+    margin: 0;
     color: red;
-    animation: pulse 1s infinite;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
 }
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    color:rgb(64, 177, 36);
-  }
-  50% {
-    transform: scale(1.1);
-    color: rgb(0, 132, 255);
-  }
-  100% {
-    transform: scale(1);
-    color: violet;
-  }
+.meow{
+    height: 300px;
+    float: right;
+    animation: vroom 5s linear infinite;
 }
-
-.card{
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+@keyframes vroom {
+    0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-200px);
+      }
   }
+
