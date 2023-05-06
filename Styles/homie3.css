@@ -1,4 +1,16 @@
+#cardcor{
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+.carousel-inner {
+    padding-bottom: 40px; /* add some padding to the bottom */
+    background-image: repeating-linear-gradient(-45deg, #cb0505, #bf0a0a 6px, #af0b0b 0, #ff0000 12px);
+    border-radius: 10%;
+
+  }
+  
 /* .carousel-item {
+
     height: 400px; 
     position: relative;
   }
