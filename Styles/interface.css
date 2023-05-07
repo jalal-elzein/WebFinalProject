@@ -1,0 +1,39 @@
+body{
+    background-image: url(../Images/507547.jpg);
+    background-size: cover;
+}
+
+.bg-carbon {
+    background-image: repeating-linear-gradient(-45deg, #302f2f, #302f2f 6px, #2a2929 0, #000000 12px);
+}
+
+.my-white-text a {
+    color: white;
+}
+.leg{
+    position: relative;
+    /* align-self: center; */
+    /* text-align: center; */
+    /* margin-top: 25%; */
+    background-color: white;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center; 
+  height: 100vh;
+}
+#con{
+        background-image: repeating-linear-gradient(-45deg, #302f2f, #302f2f 6px, #2a2929 0, #000000 12px);
+        width: 400px;
+        height: 300px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+}
