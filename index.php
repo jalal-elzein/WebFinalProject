@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 
 <html>
     <head>  
@@ -15,7 +17,38 @@
 
         <div class="title">
             <span>Log Into Your Account</h1>
-        </div>        
+        </div>
+        
+        <div class="container justify-content-center" style="margin-bottom: 10px;">
+            <?php
+                // define failure message
+                $failure = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                Login Failed. Username or Password is incorrect. Try Again.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
+                
+                if (isset($_SESSION["login_status"])) {
+                    if ($_SESSION["login_status"] == 0) {
+                        echo $failure;
+                    }
+                    unset($_SESSION["login_status"]);
+                }
+            ?>
+
+            <?php
+                $success = '<!-- change confirmation -->
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Account Was Created Successfully. Please Use It To Log In.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>';
+                if (isset($_SESSION["signup_status"])) {
+                    if ($_SESSION["signup_status"] == 1) {
+                        echo $success;
+                    }
+                    unset($_SESSION["signup_status"]);
+                }
+            ?>
+        </div>
         
     
         <div class="paragraph" style="border:0;">
@@ -35,6 +68,37 @@
                 
                 
             </form>
+
+            <script>
+            function getCookie(name) {
+                var cookies = document.cookie.split(";");
+                for (let i = 0; i < cookies.length; i++) {
+                    var tempcook = cookies[i].trim();
+                    if (tempcook.startsWith(name + "=")) {
+                        return decodeURIComponent(tempcook.substring(name.length + 1));
+                    }
+                }
+                return "";
+            }
+
+            var un = getCookie("username");
+            var ps = getCookie("password");
+
+            if(un && ps) {
+                document.getElementById("uninput").value = un;
+                document.getElementById("pinput").value = ps;
+                document.querySelector("form[name='login-form']").submit();
+            }
+
+            var isFirstLoad = true;
+            document.addEventListener("DOMContentLoaded", function() {
+                if (isFirstLoad) {
+                    document.getElementById("uninput").value = "";
+                    document.getElementById("pinput").value = "";
+                    isFirstLoad = false;
+                }
+            });
+        </script>
 
             
 

@@ -25,7 +25,7 @@
 	if ($resrows == 1) {
 		session_start();
 		$_SESSION["username"] = $username;
-		header("location:../pages/homie.html");
+		header("location:../Pages/homie.html");
 	}
 	// else send error
 	else {
