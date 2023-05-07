@@ -1,0 +1,83 @@
+body{
+    background-image: url(../Images/5776504dd8b77bf427edd51b99f470b5.jpeg);
+    background-size: cover;
+    margin-top:20px;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgb(254, 255, 209);
+    background-clip: border-box;
+    border: 0 solid transparent;
+    border-radius: .25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+}
+.me-2 {
+    margin-right: .5rem!important;
+}
+
+.image:hover{
+    cursor: pointer;
+}
+
+.links{
+    background-color: rgb(254, 255, 209);
+}
+
+.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .expanded img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+
+  .bg-carbon {
+    background-image: repeating-linear-gradient(-45deg, #292000, #3a1300 6px, rgba(121, 46, 0, 0.882), #6c2903 12px);
+}
+
+.my-white-text a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(255, 0, 0) !important;
+}
+
+#news-button {
+    transition: transform 0.2s ease; /* Add transition effect to the transform property */
+}
+
+#news-button:hover {
+    transform: scale(1.1); /* Enlarge the button on hover */
+}
+
+#news-button a {
+    color: white;
+    font-size: larger;
+}
+
+#news-button:hover{
+    color: white !important;
+}
+
+
+
+.nav-item a {
+    font-size: large;
+}

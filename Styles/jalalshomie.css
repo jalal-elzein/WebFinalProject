@@ -17,7 +17,7 @@
 
 
 .bg-carbon {
-    background-image: repeating-linear-gradient(-45deg, #302f2f, #302f2f 6px, #2a2929 0, #000000 12px);
+    background-image: repeating-linear-gradient(-45deg, #2f3030, #302f2f 6px, #2a2929 0, #000000 12px);
 }
 
 .my-white-text a {
@@ -118,4 +118,37 @@ a.card-link:active .card {
         transform: translateX(-200px);
       }
   }
+
+  #memetitle{
+    color: red;
+    font-size: 4em;
+    font-family: sans-serif;
+    font-weight: bold;
+    animation-name: changeColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 10px #fff;
+  }
+  @keyframes changeColor {
+    0% {
+      color: red;
+    }
+    50% {
+      color: blue;
+    }
+    100% {
+      color: red;
+    }
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  
 
