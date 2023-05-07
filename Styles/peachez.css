@@ -1,0 +1,17 @@
+body {
+    background-color: pink !important;
+}
+
+.card {
+    margin: 10px 0px;
+}
+
+.ui {
+    position: fixed;
+    bottom: 0;
+    background-color: #4c2f7a;
+    text-align: center;
+    padding: 10px;
+    width: 80%;
+}
+
