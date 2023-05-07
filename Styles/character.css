@@ -11,17 +11,33 @@
     animation: fadeOut 0.5s ease-in-out;
   }
 body{
-    background-image: url("../Images/hh.jpg");
-    background-size: cover;
-    background-position: center;
+    background-color: #03a9f494;
     margin-left: 50px;
     margin-right: 50px;;
 }
-#mario-image{
+.small-image {
+  width: 60%; 
+  height: auto;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px; 
+}
+/* .custom-card {
+  box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 0, 0, 0.7);
+} */
+
+
+
+
+
+
+/* #mario-image{
     margin-left: 50px;
     align-items: center;
     position: absolute;
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
-    }
+    } */
