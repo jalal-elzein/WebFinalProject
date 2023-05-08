@@ -32,7 +32,12 @@ if ($check_result->rowCount() > 0) {
 } else {
     // Insert user into database
     $sql = "INSERT INTO customer (first_name, last_name, username, email, password) VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
+    // amal edits ignore
+//     SET @user_id = LAST_INSERT_ID();
 
+// Insert a new record into the user roles table for the new user
+// INSERT INTO user_roles (user_id, role)
+// VALUES (@user_id, 'user');
     try {
         $res = $db->exec($sql);
         // signup was successful
