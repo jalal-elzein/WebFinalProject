@@ -1,0 +1,64 @@
+body {
+    background-color: hotpink !important;
+    background-image: url("../Images/pink-heart-icon-4.png");
+    background-repeat: repeat;
+}
+
+.card {
+    margin: 6px 0px;
+}
+.card-body {
+    padding: 0px;
+}
+
+.ui {
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(0, 136, 255);
+    text-align: center;
+    padding: 10px;
+    width: 80%;
+}
+
+.messagebox {
+    max-height: 650px;
+    overflow-y: scroll;
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: pink;
+    border-radius: 10px;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Style the scrollbar corner */
+::-webkit-scrollbar-corner {
+    background-color: #ff0000;
+}
+
+/* Hide the scrollbar when it's not being hovered over */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: yellow;
+}
+
+.other-message {
+    width: 60%;
+}
+
+.my-message {
+    width: 60%;
+    float: right;
+    display: block;
+}
