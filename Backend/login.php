@@ -1,7 +1,7 @@
 <?php
 	// connecting to the database
 	$dbhost = "127.0.0.1";
-	$dbname = "Mario_db";
+	$dbname = "mario_db";
 	$dbuser = "root";
 	$dbpass = "";
 	$db = null;
@@ -25,7 +25,7 @@
 	if ($resrows == 1) {
 		session_start();
 		$_SESSION["username"] = $username;
-		header("location:../pages/homie.html");
+		header("location:../Pages/homie.html");
 	}
 	// else send error
 	else {

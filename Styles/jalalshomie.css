@@ -119,7 +119,7 @@ a.card-link:active .card {
       }
   }
 
-  #memetitle{
+  .colortitle{
     color: red;
     font-size: 4em;
     font-family: sans-serif;

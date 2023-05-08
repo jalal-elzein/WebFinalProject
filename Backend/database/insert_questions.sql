@@ -1,0 +1,10 @@
+INSERT INTO `questions` (`id`, `text`) VALUES ('1', 'Sample Test 1');
+INSERT INTO `questions` (`id`, `text`) VALUES ('2', 'Sample Test 2');
+INSERT INTO `questions` (`id`, `text`) VALUES ('3', 'Sample Test 3');
+INSERT INTO `questions` (`id`, `text`) VALUES ('4', 'Sample Test 4');
+INSERT INTO `questions` (`id`, `text`) VALUES ('5', 'Sample Test 5');
+INSERT INTO `questions` (`id`, `text`) VALUES ('6', 'Sample Test 6');
+INSERT INTO `questions` (`id`, `text`) VALUES ('7', 'Sample Test 7');
+INSERT INTO `questions` (`id`, `text`) VALUES ('8', 'Sample Test 8');
+INSERT INTO `questions` (`id`, `text`) VALUES ('9', 'Sample Test 9');
+INSERT INTO `questions` (`id`, `text`) VALUES ('10', 'Sample Test 10');
