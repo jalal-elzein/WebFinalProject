@@ -107,6 +107,7 @@ session_start();
 
         <span id="login" style=" -webkit-text-stroke: 0;margin-right: 10; font-family: sans-serif; position:relative; top:220; left:42%; color: white;">
             Don't have an account? Sign up!
+            <br>
         </span>
 
         <br>
