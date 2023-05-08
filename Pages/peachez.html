@@ -16,18 +16,15 @@
 
     <body>
         <div class="container">
-            <div class="text-center">
-                <h1>Peachez Chat</h1>
+
+            <div class="container messagebox" id="messages">
             </div>
 
-            <div class="container" id="messages" style="margin-bottom: 75px;">
-            </div>
-
-            <div class="ui container d-flex justify-content-center">
+            <div class="ui container d-flex justify-content-center rounded-top">
                 <form class="d-flex w-100" role="message" id="messageform">
                     <input class="form-control me-2 flex-grow-1" type="message" placeholder="Type a Message Here"
                         aria-label="Message" id="messageinput">
-                    <button class="btn btn-primary flex-grow-1" type="submit" id="sendbtn">Send</button>
+                    <button class="btn btn-warning   flex-grow-1" style="color: white;" type="submit" id="sendbtn">Send</button>
                 </form>
             </div>
         </div>
@@ -37,18 +34,22 @@
             crossorigin="anonymous"></script>
 
         <script>
+
+            function scrollToBottom() {
+                var chatContainer = $('#messages');
+                chatContainer.scrollTop(chatContainer.prop("scrollHeight"));
+            }
+
             $(document).ready(function () {
 
                 // initial load of messages
                 $("#messages").load("../Backend/chat/load_message.php");
 
-                $(document).scrollTop($(document).height());
-                
                 $("#messageform").submit(function (event) {
                     event.preventDefault();
-                    
+
                     var messageText = $("#messageinput").val();
-                    
+
                     $.ajax({
                         url: "../Backend/chat/send_message.php",
                         type: "POST",
@@ -58,19 +59,19 @@
                             $("#messages").load("../Backend/chat/load_message.php");
                             $("#messageinput").val("");
                             console.log(response);
+                            scrollToBottom();
                         },
                         error: function (xhr, status, error) {
                             console.log(error);
                         }
                     })
 
-                    $(document).scrollTop($(document).height());
-                    
                 })
 
                 // refreshing the page every 1.5 seconds
                 setInterval(function () {
                     $("#messages").load("../Backend/chat/load_message.php");
+                    scrollToBottom();
                 }, 1500);
             })
 
