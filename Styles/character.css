@@ -1,0 +1,43 @@
+.card-header-icon {
+    font-size: 50px !important;
+  }
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  /* Apply the fade-out animation to the image */
+  .fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+  }
+body{
+    background-color: #03a9f494;
+    margin-left: 50px;
+    margin-right: 50px;;
+}
+.small-image {
+  width: 60%; 
+  height: auto;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px; 
+}
+/* .custom-card {
+  box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 0, 0, 0.7);
+} */
+
+
+
+
+
+
+/* #mario-image{
+    margin-left: 50px;
+    align-items: center;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    } */

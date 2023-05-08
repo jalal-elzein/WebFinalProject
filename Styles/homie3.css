@@ -1,0 +1,58 @@
+#cardcor{
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+.carousel-inner {
+    padding-bottom: 40px; /* add some padding to the bottom */
+    background-image: repeating-linear-gradient(-45deg, #cb0505, #bf0a0a 6px, #af0b0b 0, #ff0000 12px);
+    border-radius: 10%;
+
+  }
+  
+/* .carousel-item {
+
+    height: 400px; 
+    position: relative;
+  }
+.carousel-item.active {
+    width: 900px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  
+.card-img-top {
+    max-height: 70%; 
+  }
+#wmmak{
+    border: solid black;
+    background-color: red;
+  }
+  
+#cardcor{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 500px; 
+  }
+  
+#cardbodycor{
+    padding: 20px;
+  }
+  
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+  }
+  
+.carousel-indicators {
+    bottom: 0;
+    color: red;
+  }
+  
+.carousel-inner {
+    padding-bottom: 40px;
+  } */
