@@ -1,7 +1,7 @@
 <?php
 	// connecting to the database
 	$dbhost = "127.0.0.1";
-	$dbname = "Mario_db";
+	$dbname = "mario_db";
 	$dbuser = "root";
 	$dbpass = "";
 	$db = null;

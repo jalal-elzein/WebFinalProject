@@ -4,13 +4,13 @@ session_start();
 
 <html>
     <head>  
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <!-- <link rel="stylesheet" href="../Styles/homiecss.css"> -->
-    <link rel="stylesheet" href="Styles/loginstyles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-        <title>
-            Login
-        </title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!-- <link rel="stylesheet" href="../Styles/homiecss.css"> -->
+        <link rel="stylesheet" href="Styles/loginstyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+            <title>
+                Login
+            </title>
     </head>
     <body>
                     
@@ -57,16 +57,16 @@ session_start();
                 <br>
                 <input type="text" name="username" id="uninput" class="txtfield">
                 <br><br>
+                
                 <label for="password">Password</label>
                 <br>
                 <input type="password" name="password" id="pinput" class="txtfield">
                 <br><br>
+                
                 <button onclick="window.location.href='./Pages/homie.html';" class="btn btn-primary btn btn-danger btn-block text-white" id="news-button" type="button">
                   <i class="fas fa-user"></i>
                   Login
                 </button>
-                
-                
             </form>
 
             <script>
@@ -109,12 +109,14 @@ session_start();
             Don't have an account? Sign up!
             <br>
         </span>
+
         <br>
         <button onclick="window.location.href='./Pages/signup.html';" class="btn btn-primary btn btn-danger btn-block text-white" id="news-button" type="button" style="top: 200;left: 46.5%;position: relative;">
                 <i class="fas fa-user"></i>
                 Sign Up
         </button>
-
+    </body>
+</html>
         
                 
             

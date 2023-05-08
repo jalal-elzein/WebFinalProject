@@ -1,0 +1,8 @@
+- Look pretty
+- Presentation
+- Features
+- (UI/UX) User friendliness
+- Code structure
+- Documentation
+- Code versioning
+- Online Deployment
