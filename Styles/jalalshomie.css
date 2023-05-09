@@ -149,6 +149,132 @@ a.card-link:active .card {
     transform: scale(1.1);
     cursor: pointer;
   }
+
+  :root {
+    --color-primary: #000;
+    --color-secondary: #fff;
+    --max-img-size: 295px;
+}
+
+.my-bg-primary {
+    background-color: var(--color-primary);
+}
+
+.card {
+    height: 95%;
+    margin: 10px 0px;
+}   
+
+img {
+    height: 75%;
+    border-bottom: 1px solid gray;
+}
+
+.btn-outline-dark {
+    --bs-btn-border-color: black;
+    --bs-btn-hover-bg: black;
+}
+
+.search-key-box{
+    padding: 5px;
+    float: left;
+}
+.search-key{
+    color: black;
+    font-size: x-large;
+    font-family: math;
+    border: solid black 4px;
+    margin-left: 10px;
+}
+.searchy{
+    position: absolute;
+    /* float: left; */
+    left: 40%;
+}
+label{
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 15px;
+    
+}
+#sort{
+    margin-right: 20px;
+    border: black solid 2px;
+    padding-left: 5px;
+}
+#filter{
+        margin-right: 20px;
+        border: black solid 2px;
+        padding-left: 5px;
+}
+.title{
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: xxx-large;
+    font-family: math;
+    font-weight: bolder;
+}
+.divider{
+/* border: solid black;*/
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    margin: 0px;
+}
+.pic{
+    border-radius: 10%;
+    border: solid rgb(90, 90, 90) 2px;
+}
+.description{
+    margin:10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+.picture-container{
+    margin: 10px;
+    padding: 5px;
+    border: solid black 2px;
+    /* display: flex; */
+    display: inline-block;
+}
+.card-img-top{
+    height: 300px;
+}
+.card{
+    border: solid rgb(91, 89, 89) 1px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  .merchtitle {
+    color:white;
+    padding-left: 45%;
+    display: block;
+    margin: 0 auto;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: xxx-large;
+    font-family: math;
+    font-weight: bolder;
+    position: relative;
+    z-index: 1;
+    /* additional styles for the title */
+  }
+  
   
   
 
