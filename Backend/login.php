@@ -1,16 +1,6 @@
 <?php
-	// connecting to the database
-	$dbhost = "127.0.0.1";
-	$dbname = "mario_db";
-	$dbuser = "root";
-	$dbpass = "";
-	$db = null;
-	try {
-		$db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
-	} catch (PDOException $e) {
-		print("Error: ".$e->getMessage()."<br/>");
-		die();
-	}
+	require_once("database/db_functions.php");
+	$db = connectToDB();
 	
 	// receive values from form submission
 	$username = $_POST["username"];
@@ -25,6 +15,7 @@
 	if ($resrows == 1) {
 		session_start();
 		$_SESSION["username"] = $username;
+		$_SESSION["user_id"] = $result->fetch()["id"];
 		header("location:../Pages/homie.html");
 	}
 	// else send error
@@ -33,9 +24,4 @@
 		$_SESSION["login_status"] = 0;
 		header("location:../index.php");
 	}
-
-	session_start();
-	$_SESSION["loggedin"] = true;
-	$_SESSION["username"] = $username;
-
 ?>
