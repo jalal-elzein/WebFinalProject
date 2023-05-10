@@ -19,7 +19,7 @@ header {
 #mc{
     border: dashed #219ef357 10px;
     background-color: #9c27b040;
-    font-size: x-large;
+    font-size: large;
 }
 
 h1 {
@@ -30,7 +30,7 @@ main {
     padding: 10px;
 }
 p {
-    font-size: x-large;
+    font-size: large;
     font-family: 'Pixelated', sans-serif;
     text-align: justify;
   }
@@ -52,7 +52,7 @@ a:hover {
 
 #memetitle{
     
-    font-size: xxx-large;
+    font-size: x-large;
     
     padding: 0;
     /* margin-bottom: 0px; */

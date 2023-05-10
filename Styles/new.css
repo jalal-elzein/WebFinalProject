@@ -20,7 +20,7 @@ a.card-link:active .card {
 }
 #news{
     color: red;
-    box-shadow: 0 0 2rem rgb(94, 90, 90);
+    /* box-shadow: 0 0 2rem rgb(94, 90, 90); */
     font-size: xxx-large;
     text-align: center;
     font-weight: bolder;
