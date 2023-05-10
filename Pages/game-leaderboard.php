@@ -38,7 +38,7 @@ displayHeader('hello');
                         </thead>
                         <tbody>
                             <?php
-                            require_once("../../Backend/database/db_functions.php");
+                            require_once("../Backend/database/db_functions.php");
                             $db = connectToDB();
                             $qry = "SELECT * FROM game_scores ORDER BY score DESC LIMIT 10;";
                             $qry_res = $db->query($qry);
