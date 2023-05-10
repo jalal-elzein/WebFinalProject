@@ -1,3 +1,8 @@
+<?php
+require_once("../Backend/general.php");
+assertLogin();
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -15,6 +20,8 @@
     </head>
 
     <body>
+        <?php displayHeader('yo'); ?>
+
         <div class="container">
 
             <div class="container messagebox" id="messages">

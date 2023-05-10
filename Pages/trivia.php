@@ -1,3 +1,8 @@
+<?php
+require_once("../Backend/general.php");
+assertLogin();
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -15,15 +20,13 @@
     </head>
 
     <body  class="backg-blurred" style="height: 100vh;">
+        <?php displayHeader("aha"); ?>
+
         <div class="container text-center">
             <!-- page title -->
             <div class="row">
                 <h1>Trivia Game</h1>
-            </div>
-
-            <!-- link to game -->
-            <!-- TODO: idk but this ain't it -->
-            <a href="../Game/index.html">Platformer Game!</a>
+            </div>  
 
             <br>
             <br>
@@ -92,10 +95,10 @@
                     <button class="btn bol-inverse w-50 hidden" id="next">Next</button>
                     
                     <button class="btn bol-inverse w-50 hidden" id="lb"
-                    onclick="window.location.href = 'leaderboards/trivia.php';">Leaderboard</button>
+                    onclick="window.location.href = 'trivia-leaderboard.php';">Leaderboard</button>
                     
                     <button class="btn bol-inverse w-50 hidden" id="home"
-                    onclick="window.location.href = 'index.html';">Home</button>
+                    onclick="window.location.href = 'homie  .html';">Home</button>
                     
                     <button class="btn bol-inverse w-50 hidden" id="restart">Restart</button>
                 </div>
@@ -104,7 +107,7 @@
             <!-- start button -->
             <button class="btn bol-inverse w-100" id="start">Start</button>
             <button class="btn bol-inverse w-50" id="lb2"
-                onclick="window.location.href = 'leaderboards/trivia.php';">Leaderboard</button>
+                onclick="window.location.href = 'trivia-leaderboard.php';">Leaderboard</button>
         </div>
 
         <!-- score form -->
@@ -131,7 +134,7 @@
                     console.log("reset response: " + response);
                 }
             })
-        })
+        });
 
         $('.answer-btn').click(function () {
             // validate answer and increase score
@@ -169,7 +172,7 @@
                 $("#score2send").val($("#score").html());
                 $("form").submit();
             }
-        })
+        });
 
         function getNextQuestion() {
             $(this).addClass("hidden");
@@ -250,7 +253,7 @@
             $("#restart").addClass("hidden");
             $("#score2send").val("0");
             getNextQuestion();
-        })
+        });
     </script>
 
 </html>
