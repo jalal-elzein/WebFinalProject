@@ -11,9 +11,8 @@ $jsonData = json_decode(file_get_contents("php://input"), true);
 $score = $jsonData['score'];
 $time = $jsonData['time'];
 
-// TODO: get this from the session
 $username = "jalal-elzein";
-$user_id = 1;
+$user_id = $_SESSION["user_id"];
 
 $ins_qry =  "INSERT INTO `game_scores` (`user_id`, `score`, `date`, `time`) VALUES ($user_id, $score, NOW(), $time);";
 

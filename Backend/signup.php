@@ -1,89 +1,40 @@
 <?php
-    session_start();
+session_start();
 
-$firstname = $_POST["firstname"];
-$lastname = $_POST["lastname"];
-$username = $_POST["username"];
-$email = $_POST["email"];
-$password = $_POST["pass"];
+// $user_id = $_SESSION["user_id"];
 
-// Connect to database
-$dbhost = "127.0.0.1";
-$dbname = "Mario_db";
-$dbuser = "root";
-$dbpass = "";
-$db = null;
-try {
-    $db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
-} catch (PDOException $e) {
-    print("Error: " . $e->getMessage() . "<br/>");
-    die();
-}
+require_once("database/db_functions.php");
 
+$db = connectToDB();
+
+$data = $_POST["data"];
+
+$new_info_array = json_decode($data, true);
+
+$first_name = $new_info_array["fn"];
+$last_name = $new_info_array["ln"];
+$email = $new_info_array["email"];
+$username = $new_info_array["username"];
+$pass = $new_info_array["pass"];
 
 // Insert user into database
-$check_query = "SELECT * FROM users WHERE username='$username'";
+$check_query = "SELECT * FROM users WHERE username='$username';";
 $check_result = $db->query($check_query);
+
 if ($check_result->rowCount() > 0) {
-    // Username already exists, prompt user to enter a different one
-    $_SESSION["signup_status"] = 0;
-    // refresh page
-    header("location:../pages/signup.php");
+    // make response code 0 
+    $response = array('status' => '0');
 } else {
     // Insert user into database
-    $sql = "INSERT INTO customer (first_name, last_name, username, email, password) VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
-    // amal edits ignore
-//     SET @user_id = LAST_INSERT_ID();
-
-// Insert a new record into the user roles table for the new user
-// INSERT INTO user_roles (user_id, role)
-// VALUES (@user_id, 'user');
-    // retrieve form data
-    $firstName = $_POST['firstname'];
-    $lastName = $_POST['lastname'];
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['pass'];
-    $confirmPassword = $_POST['confirmPassword'];
-    $captcha = $_POST['cbcaptcha'];
-
-    // Connect to database
-    $dbhost = "127.0.0.1";
-    $dbname = "Mario_db";
-    $dbuser = "root";
-    $dbpass = "";
-    $db = null;
+    $sql = "INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('$email', '$username', '$pass', '$first_name', '$last_name');";
     try {
-        $db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
-    } catch (PDOException $e) {
-        print("Error: " . $e->getMessage() . "<br/>");
-        die();
+        $db->exec($sql);
+        $response = array('status' => '1');
+    } catch (Exception $e) {
+        // make response  2
+        $response = array('status' => '2');
     }
-    
-    
-    // Insert user into database
-    $check_query = "SELECT * FROM customer WHERE username='$username'";
-    $check_result = $db->query($check_query);
-    if ($check_result->rowCount() > 0) {
-        // Username already exists, prompt user to enter a different one
-        $_SESSION["signup_status"] = 0;
-        // refresh page
-        header("location:../pages/signup.php");
-    } else {
-        // Insert user into database
-        $sql = "INSERT INTO customer (first_name, last_name, username, email, password) VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
-    
-        try {
-            $res = $db->exec($sql);
-            // signup was successful
-            $_SESSION["signup_status"] = 1;
-            // redirect to login
-            header("location:../index.php");
-        } catch (Exception $e) {
-            // signup failed
-            $_SESSION["signup_status"] = 2;
-            // refresh page
-            header("location:../pages/signup.php");
-        }
-    }
+}
+// send a response back to the frontend
+echo json_encode($response);
 ?>
