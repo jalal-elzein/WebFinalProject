@@ -1,0 +1,159 @@
+<html style="background-image: url(../Images/signupbg.png);">
+
+    <head>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <!-- <link rel="stylesheet" href="../Styles/homiecss.css"> -->
+        <link rel="stylesheet" href="../Styles/loginstyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+        <title>
+            Sign Up
+        </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="title">
+            <h1>Sign Up Now!</h1>
+        </div>
+
+        <div id="response-display"></div>
+
+        <div class="paragraph" style="border:0; top: 100px;">
+            <form class="form" name="signup-form">
+                <label for="un">First Name</label>
+                <br>
+                <input type="text" name="firstname" class="txtfield" id="first_name">
+                <br>
+                <label for="un">Last Name</label>
+                <br>
+                <input type="text" name="lastname" class="txtfield" id="last_name">
+                <br>
+                <label for="un">Username</label>
+                <br>
+                <input type="text" name="username" class="txtfield" id="username">
+                <br>
+                <label for="un">Email</label>
+                <br>
+                <input type="text" name="email" class="txtfield" id="email">
+                <br>
+                <label for="pass">Password</label>
+                <br>
+                <input type="password" name="pass" class="txtfield" id="password">
+                <br>
+                <label for="pass">Confirm Password</label>
+                <br>
+                <input type="password" name="confirmPassword" class="txtfield" id="cpass">
+                <br><br>
+                <input type="checkbox" name="cbcaptcha" id="cbcaptcha" id="captcha">
+                <label for="cbcaptcha">I am human</label>
+                <br>
+                <br>
+                <button class="btn btn-primary btn btn-danger btn-block text-white" id="signup-btn" type="submit">
+                    <i class="fas fa-user"></i>
+                    Sign Up
+                </button>
+                <button class="btn btn-primary btn btn-danger btn-block text-white" id="cancel-btn" type="button"
+                    onclick="ClearForm()">
+                    <i class="fas fa-user"></i>
+                    Cancel
+                </button>
+            </form>
+        </div>
+        <br>
+        <span id="login"
+            style=" -webkit-text-stroke: 0;margin-right: 10; font-family: sans-serif; position:relative; top: 400;; left:42%; color: white;">
+            Already have an account? Login!
+        </span>
+        <br><br>
+        <button onclick="window.location.href='../index.php';"
+            class="btn btn-primary btn btn-danger btn-block text-white" id="news-button" type="button"
+            style="top: 390;left: 47%;position: relative;">
+            <i class="fas fa-user"></i>
+            Login
+        </button>
+
+        <script>
+            var failure = '<div class="alert alert-danger alert-dismissible fade show" role="alert">Account Was Not Created! Please try again or support if the problem persists.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+
+            var already = '<div class="alert alert-danger alert-dismissible fade show" role="alert">User Already Exists.Please try a different username.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+
+            function ClearForm() {
+                var mForm = document.querySelector("form[name='signup-form']");
+                mForm.elements["firstname"].value = "";
+                mForm.elements["lastname"].value = "";
+                mForm.elements["email"].value = "";
+                mForm.elements["pass"].value = "";
+                mForm.elements["confirmPassword"].value = "";
+                mForm.elements["username"].value = "";
+                mForm.elements["cbcaptcha"].checked = false;
+            }
+
+            // $("#signup-btn").click(function () {
+            //     var info = {
+            //         fn: $("#first_name").val(),
+            //         ln: $("#last_name").val(),
+            //         username: $("#username").val(),
+            //         email: $("#email").val(),
+            //         pass: $("#password").val()
+            //     };
+            //     var jsonInfo = JSON.stringify(info);
+            //     $.ajax({
+            //         url: "../Backend/signup.php",
+            //         method: "POST",
+            //         data: { data: jsonInfo },
+            //         dataType: "json",
+            //         success: function (response) {
+            //             debugger;
+            //             console.log("response: " + response.status);
+            //             if (response.status == '0') {
+            //                 $("#response-display").append(already);
+            //             } else if (response.status == '2') {
+            //                 $("#response-display").append(failure);
+            //             }
+            //         },
+            //         error: function (xhr, status, error) {
+            //             debugger; // add breakpoint here
+            //             console.log("Error: " + error);
+            //         }
+            //     });
+            // });
+
+            $('form').submit(function (event) {
+                event.preventDefault();
+                var info = {
+                    fn: $("#first_name").val(),
+                    ln: $("#last_name").val(),
+                    username: $("#username").val(),
+                    email: $("#email").val(),
+                    pass: $("#password").val()
+                };
+                var jsonInfo = JSON.stringify(info);
+                $.ajax({
+                    url: "../Backend/signup.php",
+                    method: "POST",
+                    data: { data: jsonInfo },
+                    dataType: "json",
+                    success: function (response) {
+                        debugger;
+                        console.log("response: " + response.status);
+                        if (response.status == '0') {
+                            $("#response-display").append(already);
+                        } else if (response.status == '2') {
+                            $("#response-display").append(failure);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        debugger; // add breakpoint here
+                        console.log("Error: " + error);
+                    }
+                });
+            });
+
+        </script>
+    </body>
+
+</html>
