@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
 ?>
 
 <html>
@@ -52,7 +52,7 @@ session_start();
         
     
         <div class="paragraph" style="border:0;">
-            <form class="form" action="./backend/login.php" method="POST" name="login-form">
+            <form class="form" action="./Backend/login.php" method="POST" name="login-form">
                 <label for="username">Username</label>
                 <br>
                 <input type="text" name="username" id="uninput" class="txtfield">
@@ -63,45 +63,43 @@ session_start();
                 <input type="password" name="password" id="pinput" class="txtfield">
                 <br><br>
                 
-                <button onclick="window.location.href='./Pages/homie.html';" class="btn btn-primary btn btn-danger btn-block text-white" id="news-button" type="button">
+                <button class="btn btn-primary btn btn-danger btn-block text-white" id="login-btn" type="submit">
                   <i class="fas fa-user"></i>
                   Login
                 </button>
             </form>
 
             <script>
-            function getCookie(name) {
-                var cookies = document.cookie.split(";");
-                for (let i = 0; i < cookies.length; i++) {
-                    var tempcook = cookies[i].trim();
-                    if (tempcook.startsWith(name + "=")) {
-                        return decodeURIComponent(tempcook.substring(name.length + 1));
+                function getCookie(name) {
+                    var cookies = document.cookie.split(";");
+                    for (let i = 0; i < cookies.length; i++) {
+                        var tempcook = cookies[i].trim();
+                        if (tempcook.startsWith(name + "=")) {
+                            return decodeURIComponent(tempcook.substring(name.length + 1));
+                        }
                     }
+                    return "";
                 }
-                return "";
-            }
 
-            var un = getCookie("username");
-            var ps = getCookie("password");
+                var un = getCookie("username");
+                var ps = getCookie("password");
 
-            if(un && ps) {
-                document.getElementById("uninput").value = un;
-                document.getElementById("pinput").value = ps;
-                document.querySelector("form[name='login-form']").submit();
-            }
-
-            var isFirstLoad = true;
-            document.addEventListener("DOMContentLoaded", function() {
-                if (isFirstLoad) {
-                    document.getElementById("uninput").value = "";
-                    document.getElementById("pinput").value = "";
-                    isFirstLoad = false;
+                if(un && ps) {
+                    document.getElementById("uninput").value = un;
+                    document.getElementById("pinput").value = ps;
+                    document.querySelector("form[name='login-form']").submit();
                 }
-            });
-        </script>
 
+                var isFirstLoad = true;
+                document.addEventListener("DOMContentLoaded", function() {
+                    if (isFirstLoad) {
+                        document.getElementById("uninput").value = "";
+                        document.getElementById("pinput").value = "";
+                        isFirstLoad = false;
+                    }
+                });
+            </script>
             
-
             <img src="./Images/mar3.png" class="jump" id="mario-homepage" height="300px" style="float: right;">
         </div>
 
@@ -111,7 +109,7 @@ session_start();
         </span>
 
         <br>
-        <button onclick="window.location.href='./Pages/signup.html';" class="btn btn-primary btn btn-danger btn-block text-white" id="news-button" type="button" style="top: 200;left: 46.5%;position: relative;">
+        <button onclick="window.location.href='./Pages/signup.html';" class="btn btn-primary btn btn-danger btn-block text-white" id="signup-btn" type="button" style="top: 200;left: 46.5%;position: relative;">
                 <i class="fas fa-user"></i>
                 Sign Up
         </button>
