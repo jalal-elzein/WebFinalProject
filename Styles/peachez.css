@@ -3,6 +3,17 @@ body {
     background-image: url("../Images/pink-heart-icon-4.png");
     background-repeat: repeat;
 }
+.bg-carbon {
+    background-image: repeating-linear-gradient(-45deg, #ffe600, #f7f756 6px, #fff81f 0, #fff492 12px);
+}
+
+.my-white-text a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(255, 166, 181) (255, 0, 166) !important;
+}
 
 .card {
     margin: 6px 0px;
