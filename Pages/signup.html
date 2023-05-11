@@ -76,6 +76,10 @@
             Login
         </button>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+
         <script>
             var failure = '<div class="alert alert-danger alert-dismissible fade show" role="alert">Account Was Not Created! Please try again or support if the problem persists.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 
@@ -91,36 +95,6 @@
                 mForm.elements["username"].value = "";
                 mForm.elements["cbcaptcha"].checked = false;
             }
-
-            // $("#signup-btn").click(function () {
-            //     var info = {
-            //         fn: $("#first_name").val(),
-            //         ln: $("#last_name").val(),
-            //         username: $("#username").val(),
-            //         email: $("#email").val(),
-            //         pass: $("#password").val()
-            //     };
-            //     var jsonInfo = JSON.stringify(info);
-            //     $.ajax({
-            //         url: "../Backend/signup.php",
-            //         method: "POST",
-            //         data: { data: jsonInfo },
-            //         dataType: "json",
-            //         success: function (response) {
-            //             debugger;
-            //             console.log("response: " + response.status);
-            //             if (response.status == '0') {
-            //                 $("#response-display").append(already);
-            //             } else if (response.status == '2') {
-            //                 $("#response-display").append(failure);
-            //             }
-            //         },
-            //         error: function (xhr, status, error) {
-            //             debugger; // add breakpoint here
-            //             console.log("Error: " + error);
-            //         }
-            //     });
-            // });
 
             $('form').submit(function (event) {
                 event.preventDefault();

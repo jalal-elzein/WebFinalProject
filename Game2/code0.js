@@ -35,7 +35,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 if (isConditionTrue_0) {
-{gdjs.evtTools.window.openURL("http://localhost/WebFinal/WebFinalProject/Pages/leaderboards/game.php", runtimeScene);
+{gdjs.evtTools.window.openURL("http://localhost/WebFinal/WebFinalProject/Pages/game-leaderboard.php", runtimeScene);
 }}
 
 }

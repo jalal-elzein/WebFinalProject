@@ -1,0 +1,15 @@
+.bg-carbon {
+    background-image: repeating-linear-gradient(-45deg, #2f3030, #302f2f 6px, #2a2929 0, #000000 12px);
+}
+
+.my-white-text a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(255, 0, 0) !important;
+}
+
+.nav-item a {
+    font-size: large;
+}

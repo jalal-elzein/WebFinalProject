@@ -20,7 +20,7 @@ assertLogin();
     </head>
 
     <body  class="backg-blurred" style="height: 100vh;">
-        <?php displayHeader("aha"); ?>
+        <?php displayHeader(); ?>
 
         <div class="container text-center">
             <!-- page title -->
