@@ -415,6 +415,7 @@ if (isConditionTrue_0) {
 }{for(var i = 0, len = gdjs.Game_32_45_32Level_321Code.GDPlayerObjects1.length ;i < len;++i) {
     gdjs.Game_32_45_32Level_321Code.GDPlayerObjects1[i].getBehavior("PlatformerObject").simulateJumpKey();
 }
+}{runtimeScene.getScene().getVariables().getFromIndex(0).add(100);
 }}
 
 }
@@ -515,6 +516,20 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "GameTime");
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+{
+gdjs.copyArray(runtimeScene.getObjects("Time"), gdjs.Game_32_45_32Level_321Code.GDTimeObjects1);
+{for(var i = 0, len = gdjs.Game_32_45_32Level_321Code.GDTimeObjects1.length ;i < len;++i) {
+    gdjs.Game_32_45_32Level_321Code.GDTimeObjects1[i].setString("Time: " + gdjs.evtTools.common.toString(Math.round(gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSeconds(runtimeScene, "GameTime"))));
+}
 }}
 
 }

@@ -2,7 +2,6 @@
 require_once("../Backend/general.php");
 session_start();
 assertLogin();
-displayHeader();
 ?>
 
 <!doctype html>
