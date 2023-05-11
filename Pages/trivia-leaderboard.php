@@ -55,7 +55,7 @@
                 <div class="text-center">
                     <button class="btn bol-inverse w-50 answer-btn" onclick="window.location.href = 'trivia.php';">Play The Game</button>
                     <button class="btn bol-inverse w-50 hidden" id="home"
-                    onclick="window.location.href = 'homie.html';">Home</button>
+                    onclick="window.location.href = 'homie.php';">Home</button>
                 </div>
             </div>
 

@@ -5,7 +5,7 @@ INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`)
 INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('mohammad81yazbek@gmail.com', 'mohammad-yazbek', 'passmohammad', 'mohammad', 'yazbek');
 INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('rayane3yassine@gmail.com', 'rayane-yassine', 'passrayane', 'rayane', 'yassine');
 INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('amal5arandas@gmail.com', 'amal-arandas', 'passamal', 'amal', 'arandas');
-INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('bibi81naked@gmail.com', 'bibi-naked', 'passbibi', 'bibi', 'naked');
+INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('bibi81naked@gmail.com', 'bibi-naked', 'passbibi', 'bibi', 'naked');   
 INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('umi81rnb@gmail.com', 'umi-rnb', 'passumi', 'umi', 'rnb');
 INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('dua81saleh@gmail.com', 'dua-saleh', 'passdua', 'dua', 'saleh');
 INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('muammar81gaddafi@gmail.com', 'muammar-gaddafi', 'passmuammar', 'muammar', 'gaddafi');

@@ -41,7 +41,7 @@ assertLogin();
                 <div class="col-9 d-flex justify-content-around">
                   <ul class="navbar-nav my-nav-item">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="homie.html">Home</a>
+                      <a class="nav-link active" aria-current="page" href="homie.php">Home</a>
                     </li>
   
                     <li class="nav-item my-nav-item">

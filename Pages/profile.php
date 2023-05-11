@@ -23,7 +23,7 @@ assertLogin();
         <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
             <div class="container-fluid my-white-text">
                 <a class="navbar-brand" href="#">MarioUltimate</a>
-                <button onclick="window.location.href='homie.html';"
+                <button onclick="window.location.href='homie.php';"
                     class="btn btn-primary btn btn-danger btn-block text-white" type="button">
                     Go To Homepage
                 </button>

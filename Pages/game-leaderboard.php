@@ -1,6 +1,5 @@
 <?php
 require_once("../Backend/general.php");
-assertLogin();
 displayHeader('hello');
 ?>
 
@@ -63,7 +62,7 @@ displayHeader('hello');
                 <div class="text-center">
                     <button class="btn bol-inverse w-50 answer-btn" onclick="window.location.href = '../Game2/';">Play The Game</button>
                     <button class="btn bol-inverse w-50 hidden" id="home"
-                    onclick="window.location.href = 'homie.html';">Home</button>
+                    onclick="window.location.href = 'homie.php';">Home</button>
                 </div>
             </div>
 

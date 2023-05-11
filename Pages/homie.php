@@ -1,6 +1,5 @@
 <?php
 require_once("../Backend/general.php");
-assertLogin();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -302,7 +301,7 @@ assertLogin();
     <div class="container text-center">
       <div class="row">
         <div class="col align-self-start">
-          <a href="./characters.html">
+          <a href="./characters.php">
             <div class="card" style="width: 30rem; border-radius: 10%; border: solid rgb(0, 0, 0) 10px">
               <img src="../Images/homiechracter.jpg" class="card-img-top" style="border-radius: 10%;">
               <div class="card-body">

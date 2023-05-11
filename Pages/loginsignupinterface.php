@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
         <div class="container-fluid my-white-text">
-          <a class="navbar-brand" href="./homie.html">MarioUltimate</a>
+          <a class="navbar-brand" href="./homie.php">MarioUltimate</a>
         </div>
     </nav>
     <div class="container" >

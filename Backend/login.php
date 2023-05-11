@@ -16,7 +16,7 @@
 		session_start();
 		$_SESSION["username"] = $username;
 		$_SESSION["user_id"] = $result->fetch()["id"];
-		header("location:../Pages/homie.html");
+		header("location:../Pages/homie.php");
 	}
 	// else send error
 	else {
