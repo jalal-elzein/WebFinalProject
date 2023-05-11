@@ -1,3 +1,7 @@
+<?php
+require_once("../Backend/general.php");
+assertLogin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,6 +24,7 @@
   </head>
 
   <body style="background-image:url(../Merch/452036-Super-Mario-Super-Mario-Bros.-video-games-video-game-art.jpg); background-size: contain; background-position: center top;">
+    <?php displayHeader('yo'); ?>
     <!-- navigation bar -->
     <nav class="navbar navbar-expand-lg bg-carbon navbar-dark" style="background-image: repeating-linear-gradient(-45deg, #320000, #590000 6px, #8d1800 0, #b50000 12px);">
         <div class="container-fluid my-white-text">

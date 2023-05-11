@@ -1,3 +1,7 @@
+<?php
+require_once("../Backend/general.php");
+assertLogin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +27,7 @@
 </head>
 
 <body style="background-image:url(../Images/hh.jpg)">
+  <?php displayHeader("mewie"); ?>
     <br><br>
     <h1 class="colortitle"> All Characters!</h1>
     <br><br>

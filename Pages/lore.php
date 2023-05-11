@@ -1,3 +1,7 @@
+<?php
+require_once("../Backend/general.php");
+assertLogin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +15,8 @@
     <!-- <link rel="stylesheet" href="../Styles/jalalshomie.css"> -->
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
+  <?php displayHeader("myaw"); ?>
+    <!-- <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
         <div class="container-fluid my-white-text">
           <a class="navbar-brand" href="#">MarioUltimate</a>
   
@@ -60,7 +65,7 @@
   
           </div>
         </div>
-      </nav>
+      </nav> -->
    
     <div class="introbbg">
         <header>

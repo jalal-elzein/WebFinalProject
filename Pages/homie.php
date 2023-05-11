@@ -1,3 +1,7 @@
+<?php
+require_once("../Backend/general.php");
+assertLogin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +15,8 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
+    <?php displayHeader("mimi"); ?>
+    <!-- <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
       <div class="container-fluid my-white-text">
         <a class="navbar-brand" href="#">MarioUltimate</a>
 
@@ -68,7 +73,7 @@
 
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <br>
     <br>
