@@ -15,6 +15,7 @@ require_once("../Backend/general.php");
     <title >Memes</title>
 </head>
 <body> 
+  //navbar 
 <?php displayHeader('yo'); ?>
    
         <br><br>
