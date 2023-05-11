@@ -9,11 +9,13 @@
     <title>Account</title>
 </head>
 <body>
+  <!-- nav bar using bootstap -->
     <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
         <div class="container-fluid my-white-text">
           <a class="navbar-brand" href="./homie.php">MarioUltimate</a>
         </div>
     </nav>
+    <!-- container class bootstap -->
     <div class="container" >
         <div id="con">
         <span style="color: white; font-weight: bolder;">

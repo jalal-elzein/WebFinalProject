@@ -14,155 +14,19 @@ require_once("../Backend/general.php");
   </head>
 
   <body>
-    <?php displayHeader("mimi"); ?>
-    <!-- <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
-      <div class="container-fluid my-white-text">
-        <a class="navbar-brand" href="#">MarioUltimate</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-9 d-flex justify-content-around">
-                <ul class="navbar-nav my-nav-item">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-
-                  <li class="nav-item my-nav-item">
-                    <a class="nav-link" href="./peachez.php">Peachezz</a>
-                  </li>
-
-                  <li class="nav-item my-nav-item">
-                    <a class="nav-link" href="./lore.html">Wiki</a>
-                  </li>
-                  <li class="nav-item my-nav-item">
-                    <a class="nav-link" href="./news.html">News</a>
-                  </li>
-
-
-                  <li class="nav-item my-nav-item">
-                    <a class="nav-link" href="meme.html">Memes</a>
-                  </li>
-
-                  <li class="nav-item my-nav-item">
-                    <a class="nav-link" href="./trivia.php">Trivia</a>
-                  </li>
-
-                  <li class="nav-item my-nav-item">
-                    <a class="nav-link" href="profile.php">Profile</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-3 d-flex justify-content-end">
-
-                <button onclick="window.location.href='./loginsignupinterface.html';" class="btn btn-outline-danger" type="button">
-
-                  <i class="fas fa-user"></i>
-                  Login/Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </nav> -->
-
+    <!-- nav bar called from general.php -->
+    <?php displayHeader(); ?>
     <br>
     <br>
-
-    <!-- <div class="container">
-      <div class="row">
-          <div id="carouselExampleIndicators" class="carousel slide rounded"
-            style="background-color: rgb(15, 15, 15);">
-            
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            </div>
-            
-            <div class="carousel-inner" style="height: 500px; width: 600px;">
-              <div class="carousel-item active">
-                <div class="img-container">
-                  <div class="media">
-                    <img src="../Images/marioHist1.png" class="d-block w-100">
-                    <div class="media-body">
-                      <h5 class="mt-0">Super Mario Bro - Oct 1985 </h5>
-                      <p>One day the kingdom of the peaceful mushroom people was invaded by the Koopa, a tribe of
-                        turtles
-                        famous for their black magic. </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="carousel-item">
-                <div class="img-container" class="object-fit-md-contain border rounded">
-                  <div class="media">
-                    <img src="../Images/mariohist2.png" class="d-block w-100">
-                    <div class="media-body">
-                      <h5 class="mt-0">Super Mario World - Aug 1991</h5>
-                      <p>Having returned peace to Mushroom World, Mario and Luigi decide to take a leisurely vacation
-                        with
-                        Princess Peach. But soon after arriving on the island, Princess Peach suddenly disappears. As
-                        Mario
-                        and Luigi desperately search for her, they discover a strange egg on the outskirts of the
-                        island.
-                        Then, before their very eyes, an odd little dragon hatches! The dragon calls himself Yoshi.
-                        Yoshi's
-                        friends were also taken by the turtles! Mario and Luigi begin another adventure in hopes of
-                        rescuing
-                        Yoshi's pals and Princess Peach!</p>
-                    </div>
-                  </div>
-              </div>
-              
-              <div class="carousel-item">
-                <div class="img-container">
-                  <div class="media">
-                    <img src="../Images/MarioAss.jpeg" class="d-block w-100">
-                    <div class="media-body">
-                      <h5 class="mt-0">Mario first Game</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis diam nec augue lacinia
-                        mattis
-                        eu ac justo. In nec lacinia augue.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <button class="carousel-control-prev btn btn-danger" type="button"
-              data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-
-            <button class="carousel-control-next btn btn-danger" type="button"
-              data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div> -->
+    <!-- div container ensures that the carousel and image are wrapped using bootstrap -->
   <div class="container" id="wmmak">
     <div class="container-fluid">
     <div class="row">
+      <!-- carousel takes up to 9 columns  -->
       <div class="col-md-9 p-3" style="border-radius: 10%; border: solid black 2px; background-color: black;">
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
+          <!-- buttons from each slide to the next using bootstrap -->
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -171,8 +35,10 @@ require_once("../Backend/general.php");
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
         </div>
+        <!-- inner segment of the carousel slide -->
         <div class="carousel-inner">
           <div class="carousel-item active">
+            <!-- class card inside the carousel contains image, body and text as well -->
             <div class="card" id="cardcor">
               <img src="../Images/hisotry1.png" class="card-img-top" alt="...">
               <div class="card-body" id="cardbodycor">
@@ -238,6 +104,7 @@ require_once("../Backend/general.php");
           </div>
           
         </div>
+        <!-- Carousel controls using bootstrap -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true" style="padding: 30px;"></span>
           <span class="visually-hidden">Previous</span>
@@ -248,6 +115,7 @@ require_once("../Backend/general.php");
         </button>
       </div>
       </div>
+      <!-- img taking 3 columns of space  -->
         <div class="col-md-3">
           <img src="../Images/mar3.png" class="jump" id="mario-homepage" style="float: right; height: 300px;">
         </div>
@@ -256,9 +124,12 @@ require_once("../Backend/general.php");
 </div>
 
     <br>
+    <!-- paragrpah indicating a new segment in the web -->
     <p class="fs-1 fw-bold text-center text-danger bg-dark"> Mario Recent! </p>
+    <!-- bootstrap ensures three cards in the same row -->
     <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-left: 2px;">
       <div class="col">
+        <!-- linked class card bootstrap -->
         <a href="https://www.forbes.com/sites/markhughes/2023/04/20/the-super-mario-bros-movie-topping-massive-830-million-box-office/?sh=61557fc4f6f1" class="card-link">
         <div class="card h-100" style="border: solid black 2px;">
           <img src="../Images/movie.png" class="card-img-top" alt="...">
@@ -293,11 +164,12 @@ require_once("../Backend/general.php");
       </div>
     </div>
     <br>
+    <!-- button using bootstrap with animation  -->
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
       <a class="btn btn-primary btn btn-danger btn btn-lg btn-block text-white" id="news-button" href="../Pages/news.html" role="button">See More News ></a>
     </div>
     <br>
-
+    <!-- container class bootstrap -->
     <div class="container text-center">
       <div class="row">
         <div class="col align-self-start">
@@ -317,20 +189,6 @@ require_once("../Backend/general.php");
     </div>
     
     <br>
-    <!-- <div class="container text-center">
-      <div class="row">
-        <div class="col-md-4">
-          <img src="../Images/mariohomie.png" class="meow1">
-        </div>
-        <div class="col-md-4 float-end">
-          <a href="./peachez.html">
-            <div class="card" style="width: 30rem; border-radius: 10%; border: solid rgb(0, 0, 0) 10px; float: right; margin-left: 0;">
-              <img src="../Images/feelingpeachy.png" class="card-img-top" style="border-radius: 10%;">
-            </div>
-          </a>
-        </div>
-      </div>
-    </div> -->
     <div class="container text-center">
       <div class="row">
         <div class="col align-self-start">
@@ -346,7 +204,7 @@ require_once("../Backend/general.php");
       </div>
     </div>
     
-
+<!-- nav bar bottom using bootstrap -->
     <nav class="navbar bg-carbon navbar-dark" style="height: 200px;">
               <img src="../Images/super-mario-run-2017-11-07.png" style="height: 100%;">
                 <ul class="navbar-nav my-nav-item">

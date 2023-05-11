@@ -12,7 +12,8 @@ require_once("../Backend/general.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="../jquery-3.6.4.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- title -->
+    <title>Characters</title>
     <style>
 
         .small-image {
@@ -26,24 +27,11 @@ require_once("../Backend/general.php");
 </head>
 
 <body style="background-image:url(../Images/hh.jpg)">
-  <?php displayHeader("mewie"); ?>
+  <?php displayHeader(); ?>
     <br><br>
     <h1 class="colortitle"> All Characters!</h1>
     <br><br>
-    <!-- <div id="card" class="card mb-1 w-100" style="background-color: red; border-radius: 10%;   background-image: linear-gradient(45deg, #b11818 25%, transparent 25%, transparent 50%, #9f2727 50%, #e41111 75%, transparent 75%, transparent); height: 300px; position: relative;">
-      <div class="row g-0">
-        <div class="col-sm-4 d-flex align-items-center">
-          <img id="mario-image" src="../Images/mimi.png" class="img-fluid h-100 rounded img-responsive rounded-start" alt="...">
-        </div>
-        <div class="col-sm-8">
-          <h1 class="card-title" style="font-size: 7vw;">Mario</h1>
-          <div class="card-body collapse" id="mario-text">
-            <p class="card-text">Click on the image or the text to change it</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+    <!-- container class using bootstrap takes up all 12 columns-->
   <div class="cards-container">
     <div class="container transition custom-card" id="card" style="background-color: red; border-radius: 10%; background-image: linear-gradient(45deg, #b11818 25%, transparent 25%, transparent 50%, #9f2727 50%, #e41111 75%, transparent 75%, transparent); box-shadow: 0 4px 16px 0 rgba(255, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 0, 0, 0.7);">
       <div class="row">
@@ -150,56 +138,17 @@ require_once("../Backend/general.php");
     <br>
     <br>
   </div>
-  
-  <!-- <script>
-  $(document).ready(function() {
-    var oldImage = $('#mario-image').attr('src');
-    var oldText = $('#mario-text').text(); 
-  
-    $('#card').click(function() {
-      var currentImage = $('#mario-image').attr('src'); 
-      var currentText = $('#mario-text').text(); 
-      if (currentImage === oldImage) { 
-        $('.container').css({'background-color': 'blue', 'border-radius': '5%'});
-        $('#mario-image').fadeOut(1000, function() {
-          $(this).attr('src', '../Images/emmak.png').fadeIn(1000);
-          $(this).addClass('small-image');
-          currentImage = $(this).attr('src');
-          $('.card-title').fadeOut(1000);
-        });
-        $('#mario-text').fadeOut(1000, function() {
-          $(this).text('The main hero of the Mushroom Kingdom. \n\nMario is always bright and cheerful and instantly recognizable with his blue overalls, red cap, and trademark moustache.\n\nHis brother is Luigi and he is best friends with all the members of Mushroom Kingdom!').css('white-space', 'pre-line').fadeIn(1000);
-          $('#mario-text').css({
-              'white-space': 'pre-line',
-              'font-size': 'x-large',
-              'color': 'white'
-              });
-        });
-      } else {
-        $('.container').css({'background-color': 'red', 'border-radius': '10%'});
-        $('#mario-image').fadeOut(1000, function() {
-          $(this).attr('src', oldImage).fadeIn(1000);
-          $(this).removeClass('small-image');
-          currentImage = $(this).attr('src');
-        });
-        $('#mario-text').fadeOut(1000, function() {
-          $(this).text(oldText).fadeIn(1000);
-        });
-        $('.card-title').fadeIn(1000);
-            }
-    });
-  });
-  </script> -->
->>>>>>> bb3e9524c2a9722d76b1c6588bf1393b3441017d
-<script>
+  <script>
+    // function to change and alternate between the image views using js
  function handleCardClick(cardId, imageId, textId, newImageSrc, newText) {
   var oldImage = $(imageId).attr('src');
   var oldText = $(textId).text();
-
+// launch current variables
   $(cardId).click(function() {
     var currentImage = $(imageId).attr('src');
     var currentText = $(textId).text();
     if (currentImage === oldImage) {
+      // set the new image and apply its css
       $(cardId).css({'border-radius': '5%'});
       $(imageId).fadeOut(1000, function() {
         $(this).attr('src', newImageSrc).fadeIn(1000)
@@ -216,6 +165,7 @@ require_once("../Backend/general.php");
         }).fadeIn(1000);
       });
     } else {
+      // if new image is currently displayed go back to the old one
       $(cardId).css({'border-radius': '10%'});
       $(imageId).fadeOut(1000, function() {
         $(this).attr('src', oldImage).fadeIn(1000)
@@ -232,6 +182,7 @@ require_once("../Backend/general.php");
   });
 }
   $(document).ready(function() {
+  // apply functin
   handleCardClick('#card', '#mario-image', '#mario-text', '../Images/emmak.png','The main hero of the Mushroom Kingdom. \n\nMario is always bright and cheerful and instantly recognizable with his blue overalls, red cap, and trademark moustache.\n\nHis brother is Luigi and he is best friends with all the members of Mushroom Kingdom!');
   handleCardClick('#card1', '#mario-image1', '#mario-text1', '../Images/luginew.png', 'Marios brother and fellow hero of the Mushroom Kingdom. \n\nLuigi is instantly recognizable in his trademark green hat and green shirt.\n \nLuigi is kind but can be a bit nervous, especially around ghosts. \n\n Luigi is taller and can jump higher than Mario, his moustache is more goofy too!');
   handleCardClick('#card2', '#mario-image2', '#mario-text2', '../Images/peachnew.png', "The beloved princess of the Mushroom Kingdom.\n\n She's extremely kind and is always working to create a world where everyone can live together happily. \n\nHer signature pink dress is quite lovely.\n\n She is also Marios love interest!");

@@ -11,61 +11,11 @@ require_once("../Backend/general.php");
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-    <!-- <link rel="stylesheet" href="../Styles/jalalshomie.css"> -->
 </head>
 <body>
-  <?php displayHeader("myaw"); ?>
-    <!-- <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
-        <div class="container-fluid my-white-text">
-          <a class="navbar-brand" href="#">MarioUltimate</a>
-  
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-9 d-flex justify-content-around">
-                  <ul class="navbar-nav my-nav-item">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-  
-                    <li class="nav-item my-nav-item">
-                      <a class="nav-link" href="peachez.html">Peachezz</a>
-                    </li>
-  
-                    <li class="nav-item my-nav-item">
-                      <a class="nav-link" href="#">Wiki</a>
-                    </li>
-                    <li class="nav-item my-nav-item">
-                      <a class="nav-link" href="./news.html">News</a>
-                    </li>
-  
-  
-                    <li class="nav-item my-nav-item">
-                      <a class="nav-link" href="meme.html">Memes</a>
-                    </li>
-  
-                    <li class="nav-item my-nav-item">
-                      <a class="nav-link" href="./trivia.html">Trivia</a>
-                    </li>
-  
-                    <li class="nav-item my-nav-item">
-                      <a class="nav-link" href="../Backend/profile.php">Profile</a>
-                    </li>
-                  </ul>
-                </div>
-  
-              </div>
-            </div>
-  
-          </div>
-        </div>
-      </nav> -->
-   
+  <!-- calling nav bar from general -->
+  <?php displayHeader(); ?>
+    <!-- header sections inside every div for new part just html/css-->
     <div class="introbbg">
         <header>
             <h1 style="border: dashed #219ef357 10px; color: #fff; text-align: center;
@@ -125,12 +75,14 @@ require_once("../Backend/general.php");
         <section id="mc">
             <h2 style="font-weight: bolder;
             font-size: 50px; box-shadow: 2px 2px 4px rgba(33, 100, 207, 0.3); ">Main Characters</h2>
+            <!-- unordered list -->
             <ul>
                 <li><strong>Mario</strong> - The main protagonist and a legendary hero in the Mushroom Kingdom.</li>
                 <li><strong>Luigi</strong> - Mario's younger brother, who often assists him in his adventures.</li>
                 <li><strong>Princess Peach</strong> - The kind and fair ruler of the Mushroom Kingdom, frequently kidnapped by Bowser.</li>
                 <li><strong>Bowser</strong> - The primary antagonist, a powerful Koopa who often kidnaps Princess Peach and attempts to conquer the Mushroom Kingdom.</li>
             </ul>
+            <!-- linked btn using bootstrap -->
             <a href="./characters.html">
             <div class="d-grid gap-2">
                 <button class="btn btn-primary btn btn-info " type="button">For   more   Characters!</button>

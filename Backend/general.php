@@ -8,6 +8,7 @@ function assertLogin()
 }
 
 function displayHeader() {
+  // nav class using bootstrap
   $headerHTML = '<nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
       <div class="container-fluid my-white-text">
         <a class="navbar-brand" href="homie.php">MarioUltimate</a>
@@ -59,7 +60,7 @@ function displayHeader() {
               <div class="col-3 d-flex justify-content-end">
 
                 <button onclick="window.location.href=\'loginsignupinterface.php\';" class="btn btn-outline-danger" type="button">
-
+// icon using font awesome 
                   <i class="fas fa-user"></i>
                   Login/Sign Up
                 </button>
