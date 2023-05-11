@@ -1,13 +1,19 @@
+<?php
+require_once("../Backend/general.php");
+assertLogin();
+displayHeader('hello');
+?>
+
 <!doctype html>
 <html lang="en">
 
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Trivia Leaderboard</title>
+        <title>Game Leaderboard</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <link rel="stylesheet" href="../../Styles/trivia_lb.css">
+        <link rel="stylesheet" href="../Styles/trivia_lb.css">
     </head>
 
     <body>
@@ -15,7 +21,7 @@
             <br>
         
             <div class="row">
-                <h1>Trivia Leaderboard</h1>
+                <h1>Game Leaderboard</h1>
             </div>    
 
             <div class="row">
@@ -26,22 +32,25 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Score</th>
+                                <th scope="col">Time (s)</th>
                                 <th scope="col">Date</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            require_once("../../Backend/database/db_functions.php");
+                            require_once("../Backend/database/db_functions.php");
                             $db = connectToDB();
-                            $qry = "SELECT * FROM trivia_scores ORDER BY score DESC LIMIT 10;";
+                            $qry = "SELECT * FROM game_scores ORDER BY score DESC LIMIT 10;";
                             $qry_res = $db->query($qry);
-                            for ($i = 1; $i <= 10; $i++) {
+                            $numofplayers = min(10, $qry_res->rowCount());
+                            for ($i = 1; $i <= $numofplayers; $i++) {
                                 $row = $qry_res->fetch();
                                 $username = $db->query("SELECT username FROM users WHERE id = " . $row['user_id'] . ";")->fetch()["username"];
                                 $score = "<tr class='text-white'>
                                     <th scope='row'>$i</th>
                                     <td>" . $username . "</td>
                                     <td>" . $row["score"] . "</td>
+                                    <td>" . $row["time"] . "</td>
                                     <td>" . $row["date"] . "</td>
                                     </tr>";
                                 echo $score;
@@ -52,9 +61,9 @@
 
                 </div>
                 <div class="text-center">
-                    <button class="btn bol-inverse w-50 answer-btn" onclick="window.location.href = '../trivia.html';">Play The Game</button>
+                    <button class="btn bol-inverse w-50 answer-btn" onclick="window.location.href = '../Game2/';">Play The Game</button>
                     <button class="btn bol-inverse w-50 hidden" id="home"
-                    onclick="window.location.href = '../homie.html';">Home</button>
+                    onclick="window.location.href = 'homie.html';">Home</button>
                 </div>
             </div>
 

@@ -55,7 +55,7 @@ class message {
             ?>
             <!-- TODO: change this to session username -->
             <div class="card <?php
-                                if ($res3["username"] == "jalal-elzein") echo "my-message"; 
+                                if ($res3["username"] == $_SESSION["username"]) echo "my-message"; 
                                 else echo "other-message"; 
                             ?> "
             >
