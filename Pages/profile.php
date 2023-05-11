@@ -233,24 +233,6 @@ assertLogin();
                             $("#changestatus").append(changefailed);
                         }
                     })
-
-                    // $.ajax({
-                    //     url: "../Backend/profile/update.php",
-                    //     method: "POST",
-                    //     data: {
-                    //         first_name: $("#fname").val(),
-                    //         last_name: $("#lname").val(),
-                    //         email: $("#email").val(),
-                    //         phone: $("#phone").val(),
-                    //         birthdate: $("#bday").val()
-                    //     },
-                    //     success: function (response) {
-                    //         console.log("response: " + response);
-                    //     },
-                    //     error: function (xhr, status, error) {
-                    //         console.log("error: " + error);
-                    //     }
-                    // })
                 })
             })
         </script>
