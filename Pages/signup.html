@@ -52,6 +52,7 @@
                 <label for="cbcaptcha">I am human</label>
                 <br>
                 <br>
+                
                 <button class="btn btn-primary btn btn-danger btn-block text-white" id="signup-btn" type="submit">
                     <i class="fas fa-user"></i>
                     Sign Up
@@ -99,11 +100,13 @@
             }
 
             $('form').submit(function (event) {
+                //Prevents the default form submission behavior from occurring
                 event.preventDefault();
 
                 if ($("#password").val() != $("#cpass").val()) {
                     $("#response-display").append(passerr);
                 } else {
+                    // creates an object named info with properties for the first name, last name... + converts this object to a JSON string and assigns it to a variable
                     var info = {
                         fn: $("#first_name").val(),
                         ln: $("#last_name").val(),
@@ -112,6 +115,7 @@
                         pass: $("#password").val()
                     };
                     var jsonInfo = JSON.stringify(info);
+                    //sends an AJAX request to the server
                     $.ajax({
                         url: "../Backend/signup.php",
                         method: "POST",
