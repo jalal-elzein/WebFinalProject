@@ -14,7 +14,7 @@ require_once("../Backend/general.php");
     <!-- <link rel="stylesheet" href="../Styles/jalalshomie.css"> -->
 </head>
 <body>
-  <?php displayHeader("myaw"); ?>
+  <?php displayHeader(); ?>
     <!-- <nav class="navbar navbar-expand-lg bg-carbon navbar-dark">
         <div class="container-fluid my-white-text">
           <a class="navbar-brand" href="#">MarioUltimate</a>

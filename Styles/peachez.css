@@ -1,3 +1,10 @@
+:root {
+    --my-blue: rgb(0, 136, 255);
+    --my-pink: pink;
+    --my-hot-pink: hotpink;
+    --my-yellow: yellow;
+}
+
 body {
     background-color: hotpink !important;
     background-image: url("../Images/pink-heart-icon-4.png");
@@ -61,4 +68,23 @@ body {
     width: 60%;
     float: right;
     display: block;
+}
+
+.bg-carbon {
+    /* background-image: repeating-linear-gradient(-45deg, #0077c2, #0077c2 6px, #2a63a0 0, #2a63a0 12px); */
+    /* background-image: repeating-linear-gradient(-45deg, #2f3030, #302f2f 6px, #2a2929 0, #000000 12px); */
+    /* background-image: repeating-linear-gradient(-45deg, #f9d81c, #f9d71c 6px, #e7b416 0, #e7b416 12px); */
+    background-image: repeating-linear-gradient(-45deg, #fff3a1, #fff3a1 6px, #feec90 0, #feec90 12px);
+}
+
+.my-white-text a {
+    color: var(--my-blue);
+}
+
+a:hover {
+    color: var(--my-hot-pink) !important;
+}
+
+.nav-item a {
+    font-size: large;
 }

@@ -1,5 +1,7 @@
 <?php
 require_once("../Backend/general.php");
+session_start();
+assertLogin();
 ?>
 
 <!doctype html>
@@ -19,7 +21,7 @@ require_once("../Backend/general.php");
     </head>
 
     <body>
-        <?php displayHeader('yo'); ?>
+        <?php displayHeader(); ?>
 
         <div class="container">
 

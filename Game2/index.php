@@ -1,3 +1,9 @@
+<?php
+require_once("../Backend/general.php");
+session_start();
+assertLogin();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

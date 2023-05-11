@@ -1,6 +1,7 @@
 <?php
 require_once("../Backend/general.php");
-// assertLogin();
+session_start();
+assertLogin();
 ?>
 
 <!doctype html>
