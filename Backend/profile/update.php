@@ -37,6 +37,5 @@ try {
 // send a response back to the frontend
 echo json_encode($response);
 
+// jalal
 ?>
-
-<!-- jalal -->

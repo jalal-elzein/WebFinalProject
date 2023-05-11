@@ -18,6 +18,5 @@ $score = $_POST["data"];
 $ins_qry = "INSERT INTO `trivia_scores` (`user_id`, `score`, `date`) VALUES ($user_id, $score, NOW());";
 $db->exec($ins_qry);
 
+// jalal
 ?>
-
-<!-- jalal -->

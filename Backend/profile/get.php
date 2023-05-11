@@ -34,6 +34,5 @@ $info = array($username, $email, $first_name, $last_name, $phone, $birthdate, $t
 // encode the info array as a json string and send it to the frontend
 echo json_encode($info);
 
+// jalal
 ?>
-
-<!-- jalal -->

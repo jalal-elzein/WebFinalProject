@@ -17,6 +17,5 @@ function connectToDB() {
     return $db;
 }
 
+// jalal
 ?>
-
-<!-- jalal -->

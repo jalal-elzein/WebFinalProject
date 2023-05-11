@@ -24,6 +24,6 @@
 		$_SESSION["login_status"] = 0;
 		header("location:../index.php");
 	}
-?>
 
-<!-- jalal & rayane -->
+// jalal and rayane
+?>

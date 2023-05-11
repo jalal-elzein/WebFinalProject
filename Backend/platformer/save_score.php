@@ -23,6 +23,5 @@ $user_id = $_SESSION["user_id"];
 $ins_qry =  "INSERT INTO `game_scores` (`user_id`, `score`, `date`, `time`) VALUES ($user_id, $score, NOW(), $time);";
 $db->exec($ins_qry);
 
+// jalal
 ?>
-
-<!-- jalal -->

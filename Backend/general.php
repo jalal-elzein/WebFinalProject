@@ -132,6 +132,5 @@ function displayHeader() {
     }
 }
 
+// jalal and amal
 ?>
-
-<!-- jala & amal -->

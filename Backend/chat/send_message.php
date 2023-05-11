@@ -16,6 +16,5 @@ if (isset($_POST["messageText"])) {
     $message->insertMessage();
 }
 
+// jalal
 ?>
-
-<!-- jalal -->

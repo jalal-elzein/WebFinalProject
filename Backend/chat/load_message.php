@@ -12,6 +12,6 @@ $message = new message();
 // call the display message method to load the messages onto the sceen
 $message->displayMessage();
 
-?>
 
-<!-- jalal -->
+// jalal
+?>

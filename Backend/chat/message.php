@@ -85,6 +85,5 @@ class message {
     }
 }
 
+// jalal
 ?>
-
-<!-- jalal -->
