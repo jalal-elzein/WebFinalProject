@@ -2,9 +2,13 @@
 
 
 class message {
+    // class attributes
     private $id, $user_id, $content, $time;
+    
+    // some colors to differentiate users
     public $colors = array("red", "blue", "green", "orange", "purple", "hotpink", "yellow");
 
+    // set and get methods 
     public function getID () {
         return $this->id;
     }
@@ -33,6 +37,7 @@ class message {
         $this->time = $new_time;
     }
 
+    // inesrts a new message into the database
     public function insertMessage () {
         // include the connection
         require_once("../database/db_functions.php");
@@ -41,19 +46,29 @@ class message {
         $db->exec($qry);
     }
 
+    // loads the messages onto the screen
     public function displayMessage () {
+        // connect to the database
         require_once("../database/db_functions.php");
         $db = connectToDB();
+
+        // select all messages ordered by their id
         $qry = "SELECT * FROM messages ORDER BY id;";
         $res = $db->query($qry);
 
+        // for each message
         while ($res2 = $res->fetch()) {
+
+            // get the user corresponding to the message
             $user_qry = "SELECT * FROM users WHERE id = ".$res2["user_id"].";";
             $thing = $db->query($user_qry);
             $res3 = $thing->fetch();
+
+            // color the user
             $color_i = $res2["user_id"] % 7;
             ?>
-            <!-- TODO: change this to session username -->
+
+            <!-- display a card for the message with the appropriate information -->
             <div class="card <?php
                                 if ($res3["username"] == $_SESSION["username"]) echo "my-message"; 
                                 else echo "other-message"; 
@@ -71,3 +86,5 @@ class message {
 }
 
 ?>
+
+<!-- jalal -->

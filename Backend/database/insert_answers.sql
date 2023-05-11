@@ -72,3 +72,5 @@ INSERT INTO `answers` (`question_id`, `correct`, `text`) VALUES ('15', '0', 'His
 INSERT INTO `answers` (`question_id`, `correct`, `text`) VALUES ('15', '0', 'A sword');
 INSERT INTO `answers` (`question_id`, `correct`, `text`) VALUES ('15', '0', 'A hammer');
 INSERT INTO `answers` (`question_id`, `correct`, `text`) VALUES ('15', '1', 'Fireballs');
+
+-- jalal

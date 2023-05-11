@@ -1,6 +1,9 @@
 <?php
+// get some generic functions
 require_once("../Backend/general.php");
 session_start();
+
+// redirect user if not logged in
 assertLogin();
 ?>
 
@@ -20,13 +23,16 @@ assertLogin();
         <div class="container text-center align-items-center" style="height: 100vh;">
             <br>
         
+            <!-- page title -->
             <div class="row">
                 <h1>Game Leaderboard</h1>
             </div>    
 
+            <!-- table -->
             <div class="row">
                 <div class="card glass backg-blurred">
                     <table class="table table-striped table-hover">
+                        <!-- table header -->
                         <thead>
                             <tr class="text-white">
                                 <th scope="col">#</th>
@@ -38,28 +44,39 @@ assertLogin();
                         </thead>
                         <tbody>
                             <?php
-                            require_once("../Backend/database/db_functions.php");
-                            $db = connectToDB();
-                            $qry = "SELECT * FROM game_scores ORDER BY score DESC, time ASC LIMIT 10;";
-                            $qry_res = $db->query($qry);
-                            $numofplayers = min(10, $qry_res->rowCount());
-                            for ($i = 1; $i <= $numofplayers; $i++) {
-                                $row = $qry_res->fetch();
-                                $username = $db->query("SELECT username FROM users WHERE id = " . $row['user_id'] . ";")->fetch()["username"];
-                                $score = "<tr class='text-white'>
-                                    <th scope='row'>$i</th>
-                                    <td>" . $username . "</td>
-                                    <td>" . $row["score"] . "</td>
-                                    <td>" . $row["time"] . "</td>
-                                    <td>" . $row["date"] . "</td>
-                                    </tr>";
-                                echo $score;
-                            }
+                                // import database functions
+                                require_once("../Backend/database/db_functions.php");
+                                
+                                // connect to the database
+                                $db = connectToDB();
+
+                                // get the top 10 scores ordered by score, then by time
+                                $qry = "SELECT * FROM game_scores ORDER BY score DESC, time ASC LIMIT 10;";
+                                $qry_res = $db->query($qry);
+
+                                // display less than 10 rows if we have less than 10 scores
+                                $numofplayers = min(10, $qry_res->rowCount());
+
+                                // display each row
+                                for ($i = 1; $i <= $numofplayers; $i++) {
+                                    $row = $qry_res->fetch();
+                                    $username = $db->query("SELECT username FROM users WHERE id = " . $row['user_id'] . ";")->fetch()["username"];
+                                    $score = "<tr class='text-white'>
+                                        <th scope='row'>$i</th>
+                                        <td>" . $username . "</td>
+                                        <td>" . $row["score"] . "</td>
+                                        <td>" . $row["time"] . "</td>
+                                        <td>" . $row["date"] . "</td>
+                                        </tr>";
+                                    echo $score;
+                                }
                             ?>
                         </tbody>
                     </table>
 
                 </div>
+                
+                <!-- navigation buttons -->
                 <div class="text-center">
                     <button class="btn bol-inverse w-50 answer-btn" onclick="window.location.href = '../Game2/';">Play The Game</button>
                     <button class="btn bol-inverse w-50 hidden" id="home"
@@ -75,3 +92,5 @@ assertLogin();
     </body>
 
 </html>
+
+<!-- jalal -->

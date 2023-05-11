@@ -9,3 +9,5 @@ INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`)
 INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('umi81rnb@gmail.com', 'umi-rnb', 'passumi', 'umi', 'rnb');
 INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('dua81saleh@gmail.com', 'dua-saleh', 'passdua', 'dua', 'saleh');
 INSERT INTO `users` (`email`, `username`, `password`, `first_name`, `last_name`) VALUES ('muammar81gaddafi@gmail.com', 'muammar-gaddafi', 'passmuammar', 'muammar', 'gaddafi');
+
+--jalal

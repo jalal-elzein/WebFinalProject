@@ -11,3 +11,5 @@ CREATE TABLE `mario_db`.`game_scores` (`id` INT NOT NULL AUTO_INCREMENT , `user_
 CREATE TABLE `mario_db`.`messages` (`id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT NULL , `content` LONGTEXT NOT NULL , `time` DATETIME NOT NULL , PRIMARY KEY (`id`)) ENGINE = MyISAM;
 
 ALTER TABLE `users` ADD `phone` TEXT NULL AFTER `last_name`, ADD `birthdate` DATE NULL AFTER `phone`, ADD `twitter_link` TEXT NULL AFTER `birthdate`, ADD `instagram_link` TEXT NULL AFTER `twitter_link`, ADD `facebook_link` TEXT NULL AFTER `instagram_link`;
+
+-- jalal

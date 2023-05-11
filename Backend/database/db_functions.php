@@ -1,5 +1,7 @@
 <?php
 
+// standard connection to database with pdo
+// credentials are different when hosted
 function connectToDB() {
     $dbhost = "127.0.0.1";
     $dbname = "mario_db";
@@ -16,3 +18,5 @@ function connectToDB() {
 }
 
 ?>
+
+<!-- jalal -->

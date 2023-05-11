@@ -19,7 +19,8 @@ assertLogin();
     <body>
         <div class="container text-center align-items-center" style="height: 100vh;">
             <br>
-        
+            
+            <!-- page title -->
             <div class="row">
                 <h1>Trivia Leaderboard</h1>
             </div>    
@@ -36,6 +37,7 @@ assertLogin();
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- look at documentation in game-leaderboard (it's the same) -->
                             <?php
                             require_once("../Backend/database/db_functions.php");
                             $db = connectToDB();
@@ -58,6 +60,8 @@ assertLogin();
                     </table>
 
                 </div>
+
+                <!-- navigation buttons -->
                 <div class="text-center">
                     <button class="btn bol-inverse w-50 answer-btn" onclick="window.location.href = 'trivia.php';">Play The Game</button>
                     <button class="btn bol-inverse w-50 hidden" id="home"
@@ -73,3 +77,5 @@ assertLogin();
     </body>
 
 </html>
+
+<!-- jalal -->

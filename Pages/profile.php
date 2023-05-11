@@ -172,6 +172,8 @@ assertLogin();
             </div>
         </div>
         <script>
+
+            // define some divs to be used later for user alerts
             let changesuccess = '<div class="alert alert-success alert-dismissible fade show" role="alert">Your changes have been saved successfully<button type = "button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
             
             let changefailed = '<div class="alert alert-danger alert-dismissible fade show" role="alert" id="changefailed">Something went wrong!<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
@@ -190,13 +192,15 @@ assertLogin();
                 }
             });
 
-            $(document).ready(function () {
 
+            $(document).ready(function () {
+                // get the profile info from the backend as soon as the page loads
                 $.ajax({
                     url: "../Backend/profile/get.php",
                     method: "GET",
                     dataType: "json",
                     success: function (info) {
+                        // set the info into the fields from the get request
                         $("#username").html(info[0]);
                         $("#email").val(info[1]);
                         $("#fname").val(info[2]);
@@ -210,6 +214,8 @@ assertLogin();
                 })
 
                 $("#saveinfo").click(function () {
+
+                    // create a js object from the data
                     var info = {
                         first_name: $("#fname").val(),
                         last_name: $("#lname").val(),
@@ -218,13 +224,17 @@ assertLogin();
                         birthdate: $("#bday").val()
                     };
 
+                    // json-ify the info
                     var jsonInfo = JSON.stringify(info);
 
+                    // send the info to the backend via ajax
                     $.ajax({
                         url: "../Backend/profile/update.php",
                         method: "POST",
                         dataType: "json",
                         data: { new_info: jsonInfo },
+
+                        // display appropriate alert
                         success: function (response) {
                             $("#changestatus").append(changesuccess);
                         },
@@ -242,3 +252,5 @@ assertLogin();
     </body>
 
 </html>
+
+<!-- jalal & rayane -->

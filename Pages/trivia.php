@@ -1,4 +1,5 @@
 <?php
+// make sure the user is logged in
 require_once("../Backend/general.php");
 session_start();
 assertLogin();
@@ -21,6 +22,7 @@ assertLogin();
     </head>
 
     <body  class="backg-blurred" style="height: 100vh;">
+        <!-- display navbar from generic functions -->
         <?php displayHeader(); ?>
 
         <div class="container text-center">
@@ -124,7 +126,10 @@ assertLogin();
 
     <script>
         $(document).ready(function () {
+            // hide the gamecard once the page loads
             $("#gamecard").addClass("hidden");
+
+            // reset the questions just in case
             $.ajax({
                 url: '../Backend/trivia/reset_questions.php',
                 type: 'POST',
@@ -141,10 +146,14 @@ assertLogin();
             // validate answer and increase score
             if ($(this).val() == 1) {
                 $(this).addClass("correct");
+                
+                // display +ive feedback to the user
                 $("#gamecard").addClass("green-shadow");
                 $("#scorecard").addClass("blink-green-bg");
                 $("#score").html(parseInt($("#score").html()) + 1);
             } else {
+
+                // display -ive feedback to the user
                 $(this).addClass("wrong");
                 $("#gamecard").addClass("red-shadow");
             }
@@ -165,7 +174,7 @@ assertLogin();
                 $("#next").removeClass("hidden");
             }
 
-            // end quiz
+            // end quiz if we reached 10 questions done
             else {
                 $("#home").removeClass("hidden");
                 $("#lb").removeClass("hidden");
@@ -175,12 +184,15 @@ assertLogin();
             }
         });
 
+        // loads the next random questions and its answers
         function getNextQuestion() {
+            // reset the gamecard style and state
             $(this).addClass("hidden");
             $("#gamecard").removeClass("hidden").removeClass("green-shadow").removeClass("red-shadow");
             $("#scorecard").removeClass("blink-green-bg");0
             $("#lb2").addClass("hidden");
 
+            // send a request to the backend  to retreive new random question and answer
             $.ajax({
                 url: '../Backend/trivia/trivia_back.php',
                 dataType: 'json',
@@ -189,12 +201,10 @@ assertLogin();
                     var q = data.q;
                     var a = data.a;
 
-                    console.log(q);
-                    console.log(a);
+                    $("#question").html(q["text"]);
 
-                    $("#question").html(q["number"] + ". " + q["text"]);
-
-                    // TODO: loop this?
+                    // show answers in buttons
+                    // mark correct answer
                     $("#btn1").html(a[0]["text"]);
                     $("#btn1").val(a[0]["correct"])
                     $("#btn2").html(a[1]["text"]);
@@ -209,21 +219,27 @@ assertLogin();
                 }
             });
 
+            // reset button state and style
             $(".answer-btn").prop("disabled", false);
             $(".answer-btn").removeClass("correct").removeClass("wrong");
 
+            // increase question number
             $("#qnum").html(parseInt($("#qnum").html()) + 1);
         }
 
+        // set button functions
         $("#start").click(getNextQuestion);
 
         $("#next").click(getNextQuestion);
 
+        // submit score at end of quiz
         $('form').submit(function (event) {
             event.preventDefault();
 
+            // save user score in variable
             var data = $('#score2send').val();
 
+            // send user score to backend via ajax
             $.ajax({
                 url: '../Backend/trivia/save_score.php',
                 type: 'POST',
@@ -234,7 +250,9 @@ assertLogin();
             });
         });
         
+
         $("#restart").click(function () {
+            // reset the seen questions
             $.ajax({
                 url: '../Backend/trivia/reset_questions.php',
                 type: 'POST',
@@ -245,6 +263,8 @@ assertLogin();
                     console.log("reset response: " + response);
                 }
             })
+
+            // reset buttons and gamecard style and state
             $(".answer-btn").prop("disabled", false);
             $(".answer-btn").removeClass("correct").removeClass("wrong");
             $("#qnum").html("0");
@@ -253,8 +273,12 @@ assertLogin();
             $("#lb").addClass("hidden");
             $("#restart").addClass("hidden");
             $("#score2send").val("0");
+
+            // retreive a new random question
             getNextQuestion();
         });
     </script>
 
 </html>
+
+<!-- jalal -->

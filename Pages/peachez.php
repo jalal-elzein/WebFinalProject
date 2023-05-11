@@ -1,4 +1,5 @@
 <?php
+// make sure user is logged in
 require_once("../Backend/general.php");
 session_start();
 assertLogin();
@@ -21,13 +22,15 @@ assertLogin();
     </head>
 
     <body>
+        <!-- display header from generic functions -->
         <?php displayHeader(); ?>
 
         <div class="container">
-
+            <!-- container that will be filled with messages -->
             <div class="container messagebox" id="messages">
             </div>
 
+            <!-- space to write new messages and send -->
             <div class="ui container d-flex justify-content-center rounded-top">
                 <form class="d-flex w-100" role="message" id="messageform">
                     <input class="form-control me-2 flex-grow-1" type="message" placeholder="Type a Message Here"
@@ -43,6 +46,7 @@ assertLogin();
 
         <script>
 
+            // function to make sure we're at the bottom of that chat
             function scrollToBottom() {
                 var chatContainer = $('#messages');
                 chatContainer.scrollTop(chatContainer.prop("scrollHeight"));
@@ -53,22 +57,30 @@ assertLogin();
                 // initial load of messages
                 $("#messages").load("../Backend/chat/load_message.php");
 
+                // when the user presses the button to send
                 $("#messageform").submit(function (event) {
+
+                    // don't send through the form
                     event.preventDefault();
 
+                    // get the text from the input field
                     var messageText = $("#messageinput").val();
 
+                    // send a post request with ajax to the backend to save the message
                     $.ajax({
                         url: "../Backend/chat/send_message.php",
                         type: "POST",
                         data: { messageText: messageText },
+                        
+                        // if it's successful, reset the input and refresh the messages
                         success: function (response) {
                             console.log("Saved Successfully!");
                             $("#messages").load("../Backend/chat/load_message.php");
                             $("#messageinput").val("");
-                            console.log(response);
                             scrollToBottom();
                         },
+
+                        // display error if any
                         error: function (xhr, status, error) {
                             console.log(error);
                         }
@@ -87,3 +99,5 @@ assertLogin();
     </body>
 
 </html>
+
+<!-- jalal -->

@@ -38,3 +38,5 @@ if ($check_result->rowCount() > 0) {
 // send a response back to the frontend
 echo json_encode($response);
 ?>
+
+<!-- jalal and rayane -->
