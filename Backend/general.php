@@ -60,7 +60,6 @@ function displayHeader() {
               <div class="col-3 d-flex justify-content-end">
 
                 <button onclick="window.location.href=\'loginsignupinterface.php\';" class="btn btn-outline-danger" type="button">
-// icon using font awesome 
                   <i class="fas fa-user"></i>
                   Login/Sign Up
                 </button>
