@@ -1,3 +1,8 @@
+<?php
+require_once("../Backend/general.php");
+assertLogin();
+?>
+
 <!DOCTYPE html>
 <html lang="en" ">
 <head>
@@ -11,57 +16,8 @@
     <title >Memes</title>
 </head>
 <body> 
-    <nav class="navbar navbar-expand-lg bg-carbon navbar-dark" style="background-image: repeating-linear-gradient(-45deg, #000032, #0c0059 6px, #13008d 0, #001bb5 12px);">
-        <div class="container-fluid my-white-text">
-          <a class="navbar-brand" href="#">MarioUltimate</a>
-  
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-9 d-flex justify-content-around">
-                  <ul class="navbar-nav my-nav-item">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="homie.html">Home</a>
-                    </li>
-  
-                    <li class="nav-item my-nav-item">
-                      <a class="nav-link" href="peachez.html">Peachezz</a>
-                    </li>
-  
-                    <li class="nav-item my-nav-item">
-                      <a class="nav-link" href="#">Wiki</a>
-                    </li>
-  
-                    <li class="nav-item my-nav-item">
-                      <a class="nav-link" href="meme.html">Memes</a>
-                    </li>
-  
-                    <li class="nav-item my-nav-item">
-                      <a class="nav-link" href="#">Trivia</a>
-                    </li>
-  
-                    <li class="nav-item my-nav-item">
-                      <a class="nav-link" href="../Backend/profile.php">Profile</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-3 d-flex justify-content-end">
-                    <button onclick="window.location.href='signup.html';" class="btn btn-outline-danger" type="button">
-                      <i class="fas fa-user"></i>
-                      Login/Sign Up
-                    </button>
-                  </div>
-                </div>
-              </div>
-    
-            </div>
-          </div>
-        </nav>
+<?php displayHeader('yo'); ?>
+   
         <br><br>
         <span class="colortitle">
             !!!MEMES!!! 
