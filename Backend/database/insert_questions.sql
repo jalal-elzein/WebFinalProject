@@ -11,7 +11,7 @@ INSERT INTO `questions` (`id`, `text`) VALUES ('10', 'What is the name of Marios
 INSERT INTO `questions` (`id`, `text`) VALUES ('11', 'Which game introduced the character of Bowser Jr.?');
 INSERT INTO `questions` (`id`, `text`) VALUES ('12', 'Which game did not feature Mario as the main character?');
 INSERT INTO `questions` (`id`, `text`) VALUES ('13', 'What is the name of the location where Mario and friends go to race go-karts?');
-INSERT INTO `questions` (`id`, `text`) VALUES ('14', 'In Super Mario Bros., what does Mario use to defeat enemies?');
-INSERT INTO `questions` (`id`, `text`) VALUES ('15', 'Which character has a special ability to turn invisible in Super Mario Bros. 2?');
+INSERT INTO `questions` (`id`, `text`) VALUES ('15', 'In Super Mario Bros., what does Mario use to defeat enemies?');
+INSERT INTO `questions` (`id`, `text`) VALUES ('14', 'Which character has a special ability to turn invisible in Super Mario Bros. 2?');
 
 --jalal

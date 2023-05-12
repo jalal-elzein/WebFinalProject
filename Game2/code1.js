@@ -502,7 +502,7 @@ if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Main Menu", false);
 }{gdjs.evtTools.runtimeScene.pauseTimer(runtimeScene, "GameTime");
 }{runtimeScene.getScene().getVariables().getFromIndex(3).setNumber(gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSeconds(runtimeScene, "GameTime"));
-}{gdjs.evtTools.network.sendAsyncRequest("http://localhost/WebFinal/WebFinalProject/Backend/platformer/save_score.php", "{\"score\": " + gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0))) + ", \"time\": " + gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(3))) + "}", "POST", "application/json", gdjs.VariablesContainer.badVariable, gdjs.VariablesContainer.badVariable);
+}{gdjs.evtTools.network.sendAsyncRequest("../Backend/platformer/save_score.php", "{\"score\": " + gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0))) + ", \"time\": " + gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(3))) + "}", "POST", "application/json", gdjs.VariablesContainer.badVariable, gdjs.VariablesContainer.badVariable);
 }}
 
 }
