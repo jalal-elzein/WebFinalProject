@@ -105,39 +105,38 @@
             }
 
             function validatePassword(password) {
-                // Validate that password has at least 8 characters
+                // validate that password has at least 8 characters
                 if (password.length < 8) {
                     return false;
                 }
 
-                // Validate that password contains at least one lowercase letter
+                // validate that password contains at least one lowercase letter
                 var lowercaseRegex = /^(?=.*[a-z])/;
                 if (!lowercaseRegex.test(password)) {
                     return false;
                 }
 
-                // Validate that password contains at least one uppercase letter
+                // validate that password contains at least one uppercase letter
                 var uppercaseRegex = /^(?=.*[A-Z])/;
                 if (!uppercaseRegex.test(password)) {
                     return false;
                 }
 
-                // Validate that password contains at least one number
+                // validate that password contains at least one number
                 var numberRegex = /^(?=.*\d)/;
                 if (!numberRegex.test(password)) {
                     return false;
                 }
 
-                // Validate that password contains at least one special character
+                // validate that password contains at least one special character
                 var specialCharRegex = /^(?=.*[!@#$%^&*])/;
                 if (!specialCharRegex.test(password)) {
                     return false;
                 }
 
-                // All validation checks passed
+                // all validation checks passed
                 return true;
             }
-
 
             $('form').submit(function (event) {
                 //Prevents the default form submission behavior from occurring

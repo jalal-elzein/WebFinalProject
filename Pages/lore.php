@@ -83,7 +83,7 @@ require_once("../Backend/general.php");
                 <li><strong>Bowser</strong> - The primary antagonist, a powerful Koopa who often kidnaps Princess Peach and attempts to conquer the Mushroom Kingdom.</li>
             </ul>
             <!-- linked btn using bootstrap -->
-            <a href="./characters.html">
+            <a href="./characters.php">
             <div class="d-grid gap-2">
                 <button class="btn btn-primary btn btn-info " type="button">For   more   Characters!</button>
             </div>
